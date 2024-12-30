@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Table</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h1>Data Table</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterTable()">
+    </div>
+    <div class="star-filter-container">
+        <label for="stars">Filter By Stars:</label>
+
+        <select onchange="filterTableStar(this.selectedIndex)" name="filter-stars" id="filter-stars">
+            <option value="" selected>N/A</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </div>
+    <div class="type-filter-container">
+        <label for="type">Filter By Types:</label>
+        <select onchange="filterTableType(this.value)" name="filter-types" id="filter-types">
+            <option value="" selected>N/A</option>
+            <option value="Normal">Normal</option>
+            <option value="Effect">Effect</option>
+            <option value="Magic">Magic</option>
+            <option value="Trap">Trap</option>
+            <option value="Synchro">Synchro</option>
+            <option value="XYZ">XYZ</option>
+            <option value="Fusion">Fusion</option>
+            <option value="Ritual">Ritual</option>
+            <option value="Pendulem">Pendulem</option>
+            <option value="Link">Link</option>
+            <option value="God Cards">God Cards</option>
+            <option value="Token">Token</option>
+        </select>
+    </div>
+
+    <div class="order-alphabetically-container">
+        <button onclick="sortTable(1)">Sort Alphabetically</button>
+    </div>
+
+    <div class="order-alphabetically-container">
+        <button id="openModalBtn">Add A New Record</button>
+    </div>
+
+    <div style="height:720px;overflow:auto;"">
+        <table>
+            <thead>
+                <tr>
+                    <th>Password</th>
+                    <th>Card Name</th>
+                    <th>Quantity</th>
+                    <th>Stars</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(cardData=> { %>
+                    <tr>
+                        <td><a href=" https://yugipedia.com/wiki/<%=cardData.password %>" target="_blank">
+        <%= cardData.password %>
+            </a>
+            </td>
+            <td>
+                <%= cardData.cardName %>
+            </td>
+            <td>
+                <%= cardData.quantity %>
+            </td>
+            <td>
+                <%= cardData.stars %>
+            </td>
+            <td>
+                <%= cardData.type %>
+            </td>
+            <td>
+                <%= cardData.price %>
+            </td>
+            </tr>
+            <% }); %>
+                </tbody>
+                </table>
+    </div>
+
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <label for="prefillData-password">Password:</label>
+            <input type="text" id="prefillData-password" name="prefillData-password" required><br><br>
+            <button id="prefillData" type="submit">IMPORT</button>
+            <form action="/add" method="post">
+                <h2>Add New Data</h2>
+                <label for="modal-password">Password:</label>
+                <input type="text" id="modal-password" name="password" required><br><br>
+                <label for="modal-cardName">cardName:</label>
+                <input type="text" id="modal-cardName" name="cardName" required><br><br>
+                <label for="modal-quantity">quantity:</label>
+                <input type="text" id="modal-quantity" name="quantity" required><br><br>
+                <label for="modal-stars">stars:</label>
+                <input type="text" id="modal-stars" name="stars" required><br><br>
+                <label for="modal-type">type:</label>
+                <select name="type" id="modal-type">
+                    <option value="Normal">Normal</option>
+                    <option value="Effect">Effect</option>
+                    <option value="Magic">Magic</option>
+                    <option value="Trap">Trap</option>
+                    <option value="Synchro">Synchro</option>
+                    <option value="XYZ">XYZ</option>
+                    <option value="Fusion">Fusion</option>
+                    <option value="Ritual">Ritual</option>
+                    <option value="Pendulem">Pendulem</option>
+                    <option value="Link">Link</option>
+                    <option value="God Cards">God Cards</option>
+                    <option value="Token">Token</option>
+                </select>
+                <label for="modal-price">price:</label>
+                <input type="text" id="modal-price" name="price" defaultValue="0" required><br><br>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // JavaScript to open and close the modal
+        const openModalBtn = document.getElementById('openModalBtn');
+        const modal = document.getElementById('myModal');
+        const span = document.getElementsByClassName("close")[0];
+
+        openModalBtn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+        const prefillDataBtn = document.getElementById('prefillData');
+        prefillDataBtn.onclick = function () {
+            function getDataFromWebsite(url) {
+                return fetch(url)
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+
+                        // Extract data using the provided selectors
+                        const data = {
+                            type: extractType(doc),
+                            cardName: extractTitle(doc),
+                            stars: extractLevel(doc),
+                            price: 0
+                        };
+                        function mapTypes(inputType) {
+                            switch (inputType) {
+                                case 'Normal':
+                                    return 0;
+                                case 'Effect':
+                                    return 1;
+                                case 'Magic':
+                                    return 2;
+                                case 'Trap':
+                                    return 3;
+                                case 'Synchro':
+                                    return 4;
+                                case 'XYZ':
+                                    return 5;
+                                case 'Fusion':
+                                    return 6;
+                                case 'Ritual':
+                                    return 7;
+                                case 'Pendulem':
+                                    return 8;
+                                case 'Link':
+                                    return 9;
+                                case 'God Cards':
+                                    return 10;
+                                case 'Token':
+                                default:
+                                    return 0;
+                            }
+                        }
+                        const password = document.getElementById('modal-password');
+                        const cardName = document.getElementById('modal-cardName');
+                        const quantity = document.getElementById('modal-quantity');
+                        const stars = document.getElementById('modal-stars');
+                        const type = document.getElementById('modal-type');
+                        const price = document.getElementById('modal-price');
+
+                        password.value = document.getElementById('prefillData-password').value;
+                        cardName.value = data.cardName;
+                        quantity.value = 1;
+                        stars.value = data.stars;
+                        type.selectedIndex = mapTypes(data.type);
+                        price.value = 0;
+
+                        // return data;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                        return null;
+                    });
+            }
+
+            function extractType(doc) {
+                const innerTableText = doc.getElementsByClassName('innertable')[0].innerText;
+                // return innerTableText.split('Types\t')[1].split(' /')[1].split('\n')[0].split(' ')[1];
+
+                const typesIndex = innerTableText.indexOf("Types");
+
+                // If "Types" is not found, return an empty string
+                if (typesIndex === -1) {
+                    return "";
+                }
+
+                // Extract the substring starting from the index of "Types"
+                const substring = innerTableText.substring(typesIndex);
+
+                // Find the first occurrence of a newline or the end of the string
+                const endIndex = substring.indexOf("Level") === -1 ? substring.length : substring.indexOf("Level");
+
+                // Extract the type by removing "Types" and any leading/trailing whitespace
+                const type = substring.substring("Types".length, endIndex).trim();
+
+                return type.split('/ ')[1];
+            }
+
+            function extractTitle(doc) {
+                return doc.title.split(' -')[0];
+            }
+
+            function extractLevel(doc) {
+                const innerTableText = doc.getElementsByClassName('innertable')[0].innerText;
+
+                const typesIndex = innerTableText.indexOf("Types");
+
+                // If "Types" is not found, return an empty string
+                if (typesIndex === -1) {
+                    return "";
+                }
+
+                // Extract the substring starting from the index of "Types"
+                const substring = innerTableText.substring(typesIndex);
+
+                // Find the first occurrence of a newline or the end of the string
+                const endIndex = substring.indexOf("ATK") === -1 ? substring.length : substring.indexOf("ATK");
+
+                // Extract the type by removing "Types" and any leading/trailing whitespace
+                const type = substring.substring("Types".length, endIndex).trim();
+
+                return type.split('\n')[2];
+
+            }
+            const buildURL = `https://yugipedia.com/wiki/${document.getElementById('prefillData-password').value}`
+            getDataFromWebsite(buildURL)
+
+        }
+    </script>
+</body>
+
+</html>

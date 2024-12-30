@@ -1,0 +1,3810 @@
+[
+    {
+        "password": "NONE",
+        "cardName": "The Winged Dragon of Ra",
+        "quantity": 1,
+        "stars": 10,
+        "type": "God Cards",
+        "price": 0
+    },
+    {
+        "password": "NONE",
+        "cardName": "Slifer the Sky Dragon",
+        "quantity": 1,
+        "stars": 10,
+        "type": "God Cards",
+        "price": 0
+    },
+    {
+        "password": "NONE",
+        "cardName": "Obelisk the Tormentor",
+        "quantity": 1,
+        "stars": 10,
+        "type": "God Cards",
+        "price": 0
+    },
+    {
+        "password": 70903634,
+        "cardName": "Right Arm of the Forbidden One",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Normal",
+        "price": 0
+    },
+    {
+        "password": 44519536,
+        "cardName": "Left Leg of the Forbidden One",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Normal",
+        "price": 0
+    },
+    {
+        "password": 8124921,
+        "cardName": "Right Leg of the Forbidden One",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Normal",
+        "price": 0
+    },
+    {
+        "password": 15180041,
+        "cardName": "Silent Swordsman",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 41175645,
+        "cardName": "Silent Magician",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 6728559,
+        "cardName": "Archnemeses Protos",
+        "quantity": 1,
+        "stars": 11,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25833572,
+        "cardName": "Gate Guardian",
+        "quantity": 2,
+        "stars": 11,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 33093439,
+        "cardName": "Cyber Eltanin",
+        "quantity": 2,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 69133798,
+        "cardName": "Daidara-Bocchi",
+        "quantity": 1,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 95440946,
+        "cardName": "Eldlich the Golden Lord",
+        "quantity": 2,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 32491822,
+        "cardName": "Hamon, Lord of Striking Thunder",
+        "quantity": 2,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 14799437,
+        "cardName": "Infernoid Onuncu",
+        "quantity": 3,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 59829423,
+        "cardName": "Lord of the Missing Barrows",
+        "quantity": 3,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": "NONE",
+        "cardName": "Obelisk the Tormentor",
+        "quantity": 1,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 79407975,
+        "cardName": "Rainbow Dark Dragon",
+        "quantity": 2,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 79856792,
+        "cardName": "Rainbow Dragon",
+        "quantity": 1,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 77336644,
+        "cardName": "Red Dragon Archfiend/Assault Mode",
+        "quantity": 3,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 88264978,
+        "cardName": "Red-Eyes Darkness Metal Dragon",
+        "quantity": 3,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 58604027,
+        "cardName": "The Legendary Exodia Incarnate",
+        "quantity": 3,
+        "stars": 10,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 5141117,
+        "cardName": "The Abyss Dragon Swordsoul",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25451383,
+        "cardName": "Albion the Shrouded Dragon",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71438011,
+        "cardName": "Ally of Justice Thunder Armor",
+        "quantity": 2,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 8822710,
+        "cardName": "Ally of Justice Cosmic Gateway",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 78651105,
+        "cardName": "Beast King Barbaros",
+        "quantity": 2,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 30576089,
+        "cardName": "Blue-Eyes Jet Dragon",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 38517737,
+        "cardName": "Blue-Eyes Alternative White Dragon",
+        "quantity": 2,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 85314178,
+        "cardName": "Cosmo Queen the Queen of Prayers",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 55878038,
+        "cardName": "Chaos Dragon Levianeer",
+        "quantity": 2,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 36795102,
+        "cardName": "Crystal Beast Rainbow Dragon",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 43316238,
+        "cardName": "Danger! Bigfoot!",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 90807199,
+        "cardName": "Danger! Thunderbird!",
+        "quantity": 2,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 72880377,
+        "cardName": "Dark Hole Dragon",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 57662975,
+        "cardName": "Darkstorm Dragon",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 62002838,
+        "cardName": "Dark End Evaporation Dragon",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 93332803,
+        "cardName": "Dogoran, the Mad Flame Kaiju",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 69680031,
+        "cardName": "Dogmatika Fleurdelis, the Knighted",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 63825486,
+        "cardName": "Gimmick Puppet Rouge Doll",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 99229085,
+        "cardName": "Gimmick Puppet Cattle Scream",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 34230233,
+        "cardName": "Grapha, Dragon Lord of Dark World",
+        "quantity": 2,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 66749546,
+        "cardName": "Icejade Creation Kingfisher",
+        "quantity": 1,
+        "stars": 9,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 88301393,
+        "cardName": "Infernoid Attondel",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 92962242,
+        "cardName": "Jioh the Gravity Ninja",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 35614780,
+        "cardName": "Light End Sublimation Dragon",
+        "quantity": 3,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 80019195,
+        "cardName": "Legendary Knight Timaeus",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 85800949,
+        "cardName": "Legendary Knight Critias",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 84565800,
+        "cardName": "Legendary Knight Hermos",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71278040,
+        "cardName": "Parallel eXceed",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 74725513,
+        "cardName": "Qebehsenuef, Protection of Horus",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 41406613,
+        "cardName": "Reign-Beaux, Overking of Dark World",
+        "quantity": 2,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 48806195,
+        "cardName": "Therion \"Empress\" Alasia",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 10604644,
+        "cardName": "Therion \"King\" Regulus",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 48770333,
+        "cardName": "Thunder King, the Lightningstrike Kaiju",
+        "quantity": 2,
+        "stars": 9,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 84366728,
+        "cardName": "Vanguard of the Underground Emperor",
+        "quantity": 2,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 91749600,
+        "cardName": "Vala, Seidhr of the Generaider Bosses",
+        "quantity": 1,
+        "stars": 9,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 85066822,
+        "cardName": "Water Dragon",
+        "quantity": 1,
+        "stars": 8,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98520301,
+        "cardName": "Asset Mountis",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 53804307,
+        "cardName": "Blaster, Dragon Ruler of Infernos",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 97940434,
+        "cardName": "Chaos Hunter",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 39439590,
+        "cardName": "Cyber Dinosaur",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 70711847,
+        "cardName": "Danger! Nessie!",
+        "quantity": 3,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 342673,
+        "cardName": "Dark Magician the Magician of Black Magic",
+        "quantity": 2,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 59793705,
+        "cardName": "Elemental HERO Bladedge",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 78661338,
+        "cardName": "Fantastical Dragon Phantazmay",
+        "quantity": 2,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 53921056,
+        "cardName": "General Gantala of the Ice Barrier",
+        "quantity": 2,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 18494511,
+        "cardName": "Icejade Ran Aegirine",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 51316684,
+        "cardName": "Infernoid Seitsemas",
+        "quantity": 3,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 36016907,
+        "cardName": "Jack-o-Bolan",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 55359571,
+        "cardName": "Kochobo's Hinamatsuri",
+        "quantity": 3,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": "SPEED DUEL",
+        "cardName": "Kazejin",
+        "quantity": 2,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 5556499,
+        "cardName": "Machina Fortress",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 22512237,
+        "cardName": "Mechanical Hound",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 88494899,
+        "cardName": "Medium of the Ice Barrier",
+        "quantity": 2,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 29587993,
+        "cardName": "Mist Valley Apex Avian",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25607552,
+        "cardName": "Nowru Aries the Vernal Dragon",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 38369349,
+        "cardName": "Manga Ryu-Ran",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 28674152,
+        "cardName": "Radian, the Multidimensional Kaiju",
+        "quantity": 2,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 99458769,
+        "cardName": "Reign-Beaux, Overlord of Dark World",
+        "quantity": 2,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 90000652,
+        "cardName": "Rescue-ACE Fire Engine",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25955164,
+        "cardName": "Sanga of the Thunder",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98434877,
+        "cardName": "Suijin",
+        "quantity": 3,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 89399912,
+        "cardName": "Tempest, Dragon Ruler of Storms",
+        "quantity": 1,
+        "stars": 7,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 45033006,
+        "cardName": "Ally of Justice Enemy Catcher",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 30603688,
+        "cardName": "Apprentice Illusion Magician",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 53008933,
+        "cardName": "Archfiend's Advent",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 7459919,
+        "cardName": "Blackwing - Zonda the Dusk",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 87170768,
+        "cardName": "Contact \"C",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 38033121,
+        "cardName": "Dark Magician Girl",
+        "quantity": 3,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 65287621,
+        "cardName": "Dark Driceratops",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 66192538,
+        "cardName": "Danmari @Ignister",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 41090784,
+        "cardName": "Dai-sojo of the Ice Barrier",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 9411399,
+        "cardName": "Destiny HERO - Malicious",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 91800273,
+        "cardName": "Dimension Shifter",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 55349196,
+        "cardName": "Double-Headed Dino King Rex",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 72328962,
+        "cardName": "Fabled Soulkius",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 55589254,
+        "cardName": "Frost and Flame Dragon",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 32991027,
+        "cardName": "Georgius, Swordman of the Ice Barrier",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 74169516,
+        "cardName": "Golem that Guards the Millennium Treasures",
+        "quantity": 3,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 77901552,
+        "cardName": "Hieratic Dragon of Tefnuit",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 96055137,
+        "cardName": "Infernoid Sjette",
+        "quantity": 3,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 19516687,
+        "cardName": "Libromancer Agent",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 52824910,
+        "cardName": "Kaiser Glider",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 34968834,
+        "cardName": "Lucent, Netherlord of Dark World",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 15667446,
+        "cardName": "Latinum, Exarch of Dark World",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 64538914,
+        "cardName": "Manticore of Smashing",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 4929256,
+        "cardName": "Mobius the Frost Monarch",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 29155212,
+        "cardName": "Pumpking the King of Ghosts",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 45313993,
+        "cardName": "Red Warg",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 24311595,
+        "cardName": "Rescueroid",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 57281778,
+        "cardName": "Ryu Kokki",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 65403020,
+        "cardName": "The End of Anubis",
+        "quantity": 3,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 66362965,
+        "cardName": "The Fiend Megacyber",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 91842653,
+        "cardName": "Toon Summoned Skull",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 7602840,
+        "cardName": "UFOroid",
+        "quantity": 1,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 56099748,
+        "cardName": "Visas Starfrost",
+        "quantity": 2,
+        "stars": 6,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 52265835,
+        "cardName": "Ally of Justice Rudra",
+        "quantity": 2,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 4754691,
+        "cardName": "Amphibious Bugroth MK-11",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 75892194,
+        "cardName": "Ancient Gear Dragon",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 20292186,
+        "cardName": "Artifact Scythe",
+        "quantity": 2,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71821687,
+        "cardName": "Ascator, Dawnwalker",
+        "quantity": 3,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 55461744,
+        "cardName": "Big-Winged Berfomet",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 70095154,
+        "cardName": "Cyber Dragon",
+        "quantity": 3,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 18060565,
+        "cardName": "Dragunity Primus Pilus",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 43017476,
+        "cardName": "Duoterion",
+        "quantity": 2,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 81825063,
+        "cardName": "General Wayne of the Ice Barrier",
+        "quantity": 3,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 78004197,
+        "cardName": "Goldd, Wu-Lord of Dark World",
+        "quantity": 2,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 92003832,
+        "cardName": "Gold Pride - Roller Baller",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 46037213,
+        "cardName": "Guardian Tryce",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25811989,
+        "cardName": "Infernoid Piaty",
+        "quantity": 3,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 27882993,
+        "cardName": "Infernalqueen Salmon",
+        "quantity": 2,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 61465001,
+        "cardName": "Loud Cloud the Storm Serpent",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 41978142,
+        "cardName": "Mist Valley Executor",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 47795344,
+        "cardName": "Naturia Hydrangea",
+        "quantity": 2,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 7304544,
+        "cardName": "Naturia Pineapple",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 20174189,
+        "cardName": "Naturia Bamboo Shoot",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 22712877,
+        "cardName": "Paralyzing Mushroom",
+        "quantity": 3,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 66661678,
+        "cardName": "Royal Knight of the Ice Barrier",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 65479980,
+        "cardName": "S-Force Dog Tag",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": "SPEED DUEL",
+        "cardName": "Shadow Ghoul",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 32619583,
+        "cardName": "Sillva, Warlord of Dark World",
+        "quantity": 2,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 1164211,
+        "cardName": "Shield of the Millennium Dynasty",
+        "quantity": 2,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 54343893,
+        "cardName": "Vice Dragon",
+        "quantity": 3,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 84903021,
+        "cardName": "War Rock Mammud",
+        "quantity": 1,
+        "stars": 5,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 70832512,
+        "cardName": "Absolute Crusader",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 55982698,
+        "cardName": "Ally of Justice Reverse Break",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 28985331,
+        "cardName": "Armageddon Knight",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 67159705,
+        "cardName": "Armored Cybern",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 3431737,
+        "cardName": "Assault Beast",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 74311226,
+        "cardName": "Atlantean Dragoons",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 33731070,
+        "cardName": "Beiige, Vanguard of Dark World",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 65240384,
+        "cardName": "Big Shield Gardna",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 61901281,
+        "cardName": "Black Dragon Collapserpent",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25784595,
+        "cardName": "Bone Archfiend",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71413901,
+        "cardName": "Breaker the Magical Warrior",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 6214884,
+        "cardName": "Brron, Mad King of Dark World",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 45005708,
+        "cardName": "The Bystial Aluber",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 96030710,
+        "cardName": "Centur-Ion Atrii",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 16956455,
+        "cardName": "Chiron the Mage",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 30327674,
+        "cardName": "Chaos Witch",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 92565383,
+        "cardName": "Cornfield Coatl",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 93889755,
+        "cardName": "Crass Clown",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 21698716,
+        "cardName": "Crystal Beast Cobalt Eagle",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 7093411,
+        "cardName": "Crystal Beast Sapphire Pegasus",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 95600067,
+        "cardName": "Crystal Beast Topaz Tiger",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 69937550,
+        "cardName": "Crystal Beast Amber Mammoth",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 59281922,
+        "cardName": "Cyber Dragon Drei",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 5373478,
+        "cardName": "Cyber Dragon Zwei",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 3370104,
+        "cardName": "Cyber Phoenix",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 16209941,
+        "cardName": "Danger! Chupacabra!",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 52350806,
+        "cardName": "Danger! Mothman!",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 33875961,
+        "cardName": "Dark Catapulter",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 66472129,
+        "cardName": "Dipsea Fiend",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 20277376,
+        "cardName": "Divine Dragon Apocralyph",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 49109013,
+        "cardName": "Doomstar Ulka",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 28183605,
+        "cardName": "Dragunity Dux",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 81661951,
+        "cardName": "Dragunity Militum",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 92868896,
+        "cardName": "Dragunity Senatus",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71218746,
+        "cardName": "Drillroid",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 63060238,
+        "cardName": "Elemental HERO Blazeman",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 79979666,
+        "cardName": "Elemental HERO Bubbleman",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 86188410,
+        "cardName": "Elemental HERO Wildheart",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 9107531,
+        "cardName": "Electro Blaster",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 12600382,
+        "cardName": "Exodia Necross",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 43863925,
+        "cardName": "Exosister Stella",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 984114,
+        "cardName": "Expressroid",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 12235475,
+        "cardName": "Fabled Ashenveil",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 26704411,
+        "cardName": "The Fabled Kokkator",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 27012717,
+        "cardName": "Fierce Tiger Monghu",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 1047075,
+        "cardName": "Fighting Flame Swordsman",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 63947968,
+        "cardName": "Fiend Reflection of the Millennium",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 77372241,
+        "cardName": "Flamvell Grunika",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 42009836,
+        "cardName": "Fossil Dyna Pachycephalo",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 26082117,
+        "cardName": "Gagaga Magician",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 863795,
+        "cardName": "Galaxy Summoner",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 77895328,
+        "cardName": "Genta, Gateman of Dark World",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 53493204,
+        "cardName": "Goddess with the Third Eye",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 42868711,
+        "cardName": "Gora Turtle of Illusion",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 68450517,
+        "cardName": "Genex Ally Duradark",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 97017120,
+        "cardName": "Giant Rat",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 36436372,
+        "cardName": "Gimmick Puppet Little Soldiers",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 82489470,
+        "cardName": "The Golden Swordsoul",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 63748694,
+        "cardName": "Gunkan Suship Shari Red",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 66337215,
+        "cardName": "Herald of Creation",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71459017,
+        "cardName": "Hinezumi Hanabi",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 22587018,
+        "cardName": "Hydrogeddon",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 89423971,
+        "cardName": "Infernoid Patrulea",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 94773007,
+        "cardName": "Jirai Gumo",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71106375,
+        "cardName": "Jurrac Iguanon",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 23927545,
+        "cardName": "Jurrac Protops",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 17444133,
+        "cardName": "Kaiser Sea Horse",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 48048590,
+        "cardName": "Keeper of Dragon Magic",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 90790253,
+        "cardName": "Little-Winguard",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 40320754,
+        "cardName": "Lord Poison",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 6061630,
+        "cardName": "Magical Exemplar",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 37552929,
+        "cardName": "Maiden of the Millennium Moon",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 33945211,
+        "cardName": "Marincess Basilalima",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 55537983,
+        "cardName": "Mimighoul Master",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 61845881,
+        "cardName": "Minairuka",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 15960641,
+        "cardName": "Mirage Dragon",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 82199284,
+        "cardName": "Mist Valley Falcon",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 22837504,
+        "cardName": "Mist Valley Soldier",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71340250,
+        "cardName": "Mixeroid",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 84192580,
+        "cardName": "Mulcharmy Purulia",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 83011277,
+        "cardName": "Mystic Tomato",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 33866130,
+        "cardName": "Naturia Cliff",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 70083723,
+        "cardName": "Naturia Dragonfly",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 80555116,
+        "cardName": "Naturia Guardian",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 51254980,
+        "cardName": "Naturia Mantis",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 24644634,
+        "cardName": "Naturia White Oak",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 91554542,
+        "cardName": "Neo Flamvell Sabre",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 66569334,
+        "cardName": "Nightmell the Dark Bonder",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 57835716,
+        "cardName": "Orcust Harp Horror",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98806751,
+        "cardName": "Obsessive Uvualoop",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 58071123,
+        "cardName": "Oxygeddon",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 20700531,
+        "cardName": "Pilgrim of the Ice Barrier",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 26185991,
+        "cardName": "Pinch Hopper",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 91559748,
+        "cardName": "Prickle Fairy",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 97262307,
+        "cardName": "Ragnaraika Wicked Butterfly",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 34568783,
+        "cardName": "R-Genex Undine",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 14886469,
+        "cardName": "Red Sprinter",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 14878871,
+        "cardName": "Rescue Cat",
+        "quantity": 6,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 85138716,
+        "cardName": "Rescue Rabbit",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 24779554,
+        "cardName": "Rucia of the White Forest",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 64926005,
+        "cardName": "Samurai of the Ice Barrier",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71829750,
+        "cardName": "Serpentine Princess",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 77312273,
+        "cardName": "Shell of Chaos",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 95956346,
+        "cardName": "Shining Angel",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98385955,
+        "cardName": "Silvy of the White Forest",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 73752131,
+        "cardName": "Skilled Dark Magician",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 64306248,
+        "cardName": "Skull-Mark Ladybug",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 67750322,
+        "cardName": "Skull Meister",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 60228941,
+        "cardName": "Snoww, Unlight of Dark World",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 57617178,
+        "cardName": "Sonic Bird",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 88123329,
+        "cardName": "Spiritual Beast Rampengu",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 13890468,
+        "cardName": "Spiritual Beast Pettlephin",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 65193366,
+        "cardName": "Spiritual Beast Tamer Winda",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 67436768,
+        "cardName": "Springans Brothers",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 45484331,
+        "cardName": "Springans Kitt",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 24610207,
+        "cardName": "Star Drawing",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 15381421,
+        "cardName": "Starliege Seyfert",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 27036706,
+        "cardName": "Starry Knight Ciel",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98049038,
+        "cardName": "Stealthroid",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 44729197,
+        "cardName": "Steamroid",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 31812496,
+        "cardName": "Stone Statue of the Aztecs",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 50032342,
+        "cardName": "Strategist of the Ice Barrier",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 99861526,
+        "cardName": "Submarineroid",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 423585,
+        "cardName": "Summoner Mon",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 5220687,
+        "cardName": "Super-Nimble Mega Hamster",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 8152834,
+        "cardName": "Tarai",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 42822433,
+        "cardName": "Tellarknight Altairan",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 79210531,
+        "cardName": "Tellarknight Lyran",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 65458948,
+        "cardName": "Toon Mermaid",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 65504487,
+        "cardName": "Toy Soldier",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 69925461,
+        "cardName": "Toy Tank",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 19096726,
+        "cardName": "Tri-Brigade Mercourier",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 61538782,
+        "cardName": "Truckroid",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 92084010,
+        "cardName": "Unshaven Angler",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 8512558,
+        "cardName": "Utopic Onomatopoeia",
+        "quantity": 2,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 52589809,
+        "cardName": "Wandering King Wildwind",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 15090429,
+        "cardName": "Whirlwind Prodigy",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 1571945,
+        "cardName": "White Ninja",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 99234526,
+        "cardName": "White Dragon Wyverburster",
+        "quantity": 3,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 78010363,
+        "cardName": "Witch of the Black Forest",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 15079028,
+        "cardName": "World Soul - Carbon",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 57511992,
+        "cardName": "Yorishiro of the Aqua",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 68258355,
+        "cardName": "ZS - Armed Sage",
+        "quantity": 1,
+        "stars": 4,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 83994646,
+        "cardName": "4-Starred Ladybug of Doom",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 99054885,
+        "cardName": "The Agent of Destruction - Venus",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 8233522,
+        "cardName": "Ally of Justice Cycle Reader",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 3648368,
+        "cardName": "Ally of Justice Searcher",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 36378213,
+        "cardName": "Ambulanceroid",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 14558127,
+        "cardName": "Ash Blossom & Joyous Spring",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 94670654,
+        "cardName": "Baku the Beast Ninja",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 79126789,
+        "cardName": "Broww, Huntsman of Dark World",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 53797637,
+        "cardName": "Burner, Dragon Ruler of Sparks",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 15981690,
+        "cardName": "Carboneddon",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 85087012,
+        "cardName": "Card Trooper",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 12527118,
+        "cardName": "Cassimolar",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 28637168,
+        "cardName": "Crane Crane",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 5780210,
+        "cardName": "Creation Resonator",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 32933942,
+        "cardName": "Crystal Beast Amethyst Cat",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 68215963,
+        "cardName": "Crystal Beast Emerald Tortoise",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 32710364,
+        "cardName": "Crystal Beast Ruby Carbuncle",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 48386462,
+        "cardName": "The Cuckoo Commanded to Croon",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 99745551,
+        "cardName": "Danger!? Tsuchinoko?",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 97021916,
+        "cardName": "Dark Resonator",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 69579761,
+        "cardName": "Des Koala",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 9637706,
+        "cardName": "Des Wombat",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 13361027,
+        "cardName": "Dragunity Darkspear",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 69975751,
+        "cardName": "Dragunity Guisarme",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 11590299,
+        "cardName": "Dora Dora",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 82498947,
+        "cardName": "Defender of the Ice Barrier",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 13215230,
+        "cardName": "Dream Clown",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 78275321,
+        "cardName": "Fire Ant Ascator",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 64034255,
+        "cardName": "Genex Ally Birdman",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 56704140,
+        "cardName": "Geomancer of the Ice Barrier",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 73642296,
+        "cardName": "Ghost Belle & Haunted Mansion",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 59438930,
+        "cardName": "Ghost Ogre & Snow Rabbit",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 23512906,
+        "cardName": "Gold Pride - Leon",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 76593718,
+        "cardName": "Greed Jar",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 57346400,
+        "cardName": "Guard Dog",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 18325492,
+        "cardName": "Gyroid",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 52038272,
+        "cardName": "Infernoid Harmadik",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 34627841,
+        "cardName": "Kaibaman",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 3361010,
+        "cardName": "Kitsuni Kitsunebi",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98007437,
+        "cardName": "Knight Armed Dragon, the Armored Knight Dragon",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 40640057,
+        "cardName": "Kuriboh",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 23898021,
+        "cardName": "Lilith, Lady of Lament",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 72171665,
+        "cardName": "Magical Broker",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 7084129,
+        "cardName": "Magician's Rod",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 34541543,
+        "cardName": "Master Tao the Chanter",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 50042011,
+        "cardName": "Mementotlan Shleepy",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 30291086,
+        "cardName": "Mental Tuner",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 93900406,
+        "cardName": "Mushroom Man #2",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 35058857,
+        "cardName": "Magical King Moonstar",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 42110434,
+        "cardName": "Naturia Butterfly",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 11390349,
+        "cardName": "Naturia Fruitfly",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 87649699,
+        "cardName": "Naturia Ragweed",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 54862960,
+        "cardName": "Ni-Ni the Mirror Mikanko",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 16226786,
+        "cardName": "Night Assailant",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 6901008,
+        "cardName": "Phantom King Hydride",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 26439287,
+        "cardName": "Proto-Cyber Dragon",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 30227494,
+        "cardName": "Psychic Tracker",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 26889158,
+        "cardName": "Salamangreat Gazelle",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 26202165,
+        "cardName": "Sangan",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 99801464,
+        "cardName": "Sari of the Silverwing Axe",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 46877100,
+        "cardName": "Scareclaw Acro",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 83135907,
+        "cardName": "Scrap Goblin",
+        "quantity": 3,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 62991792,
+        "cardName": "Soul Resonator",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 23657016,
+        "cardName": "Tenpai Dragon Genroku",
+        "quantity": 2,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 18482591,
+        "cardName": "Warlock of the Ice Barrier",
+        "quantity": 1,
+        "stars": 3,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 64977888,
+        "cardName": "Apprentice Piper",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25592142,
+        "cardName": "Astellar of the White Forest",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 57985393,
+        "cardName": "Broomy",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 45812361,
+        "cardName": "Cardcar D",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 94076521,
+        "cardName": "Cartorhyn the Hidden Gem of the Seafront",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 34761841,
+        "cardName": "Crimson Resonator",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 23950192,
+        "cardName": "Cryomancer of the Ice Barrier",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 26259179,
+        "cardName": "Couple of Aces",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 23893227,
+        "cardName": "Cyber Dragon Core",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 78868119,
+        "cardName": "Deep Sea Diva",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 45483489,
+        "cardName": "Deep Sea Sentry",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 10474647,
+        "cardName": "Depresspard",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 42427230,
+        "cardName": "Division",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 34976176,
+        "cardName": "Blackwing - Chinook the Snow Blast",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 88733579,
+        "cardName": "Drill Bug",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 59755122,
+        "cardName": "Dragunity Phalanx",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 58680635,
+        "cardName": "Electrode Beast Anion",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 21291696,
+        "cardName": "Electrode Beast Cation",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 61980241,
+        "cardName": "Elzette of the White Forest",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 82888408,
+        "cardName": "The Fabled Cerburrel",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 55277252,
+        "cardName": "The Fabled Nozoochee",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 47217354,
+        "cardName": "Fabled Raven",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 82090807,
+        "cardName": "Fallen of Argyros",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 95178994,
+        "cardName": "Giant Germ",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 51232472,
+        "cardName": "Gren, Tactician of Dark World",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 7089711,
+        "cardName": "Hane-Hane",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25847467,
+        "cardName": "Kahkki, Guerilla of Dark World",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 83293307,
+        "cardName": "Krawler Receptor",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 68658728,
+        "cardName": "Little Chimera",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 71696014,
+        "cardName": "Magician's Robe",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 67694706,
+        "cardName": "Magicolloidal Sol",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 54652250,
+        "cardName": "Man-Eater Bug",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 17272964,
+        "cardName": "Mannadium Fearless",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 80621253,
+        "cardName": "Mannadium Torrid",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 28933734,
+        "cardName": "Mask of Darkness",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98416533,
+        "cardName": "Melffy Wally",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 14983497,
+        "cardName": "Mist Valley Baby Roc",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98437424,
+        "cardName": "Naturia Cosmobeet",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 70261145,
+        "cardName": "Naturia Tulip",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 93920745,
+        "cardName": "Penguin Soldier",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 23571046,
+        "cardName": "Quillbolt Hedgehog",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 61052897,
+        "cardName": "R-Genex Turing",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 40975574,
+        "cardName": "Red Resonator",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 28004531,
+        "cardName": "Rex, Freight Fur Hire",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 21502796,
+        "cardName": "Ryko, Lightsworn Hunter",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 42647539,
+        "cardName": "Ryu-Kishin Clown",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 5498296,
+        "cardName": "Scarr, Scout of Dark World",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 87685879,
+        "cardName": "Sea Koala",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 27527047,
+        "cardName": "Secret Guards of the Ice Barrier",
+        "quantity": 2,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 76145933,
+        "cardName": "Spright Blue",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 13533678,
+        "cardName": "Spright Jet",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 49928686,
+        "cardName": "Spright Pixies",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 75922381,
+        "cardName": "Spright Red",
+        "quantity": 3,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 9126351,
+        "cardName": "Swap Frog",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 98396890,
+        "cardName": "Vision Resonator",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 81383947,
+        "cardName": "White Magician Pikeru",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 51474037,
+        "cardName": "Yamorimori",
+        "quantity": 1,
+        "stars": 2,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 60990740,
+        "cardName": "Absolute King Back Jack",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 9076207,
+        "cardName": "Armed Ninja",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 89127526,
+        "cardName": "Barrier Resonator",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 19665973,
+        "cardName": "Battle Fader",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 84079032,
+        "cardName": "Bettan Bat",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 7623640,
+        "cardName": "Ceruli, Guru of Dark World",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 13764881,
+        "cardName": "Chain Resonator",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 1434352,
+        "cardName": "Chaos Necromancer",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 3657444,
+        "cardName": "Cyber Valley",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 24508238,
+        "cardName": "D.D. Crow",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 54455664,
+        "cardName": "Dragunity Brandistock",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 81962318,
+        "cardName": "Dragunity Tribus",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 94145021,
+        "cardName": "Droll & Lock Bird",
+        "quantity": 6,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 22435424,
+        "cardName": "Drytron Nu II",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 29905795,
+        "cardName": "The Fabled Chawa",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 90616316,
+        "cardName": "The Fabled Peggulsus",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 13761956,
+        "cardName": "Flamvell Baby",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 30399511,
+        "cardName": "Genex Power Planner",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 70703416,
+        "cardName": "Hexa Spirit of the Ice Barrier",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 93953933,
+        "cardName": "Hydralander Orbit",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 53404966,
+        "cardName": "Infernoble Knight Ricciardetto",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 58446973,
+        "cardName": "Infernoid Decatron",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 60551528,
+        "cardName": "Infernoid Pirmais",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 2511,
+        "cardName": "Labrynth Cooclock",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 31560081,
+        "cardName": "Magician of Faith",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 97631303,
+        "cardName": "Magicians' Souls",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 50415441,
+        "cardName": "Mimighoul Archfiend",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 23920796,
+        "cardName": "Mimighoul Cerberus",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 81522098,
+        "cardName": "Mimighoul Dragon",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 44201739,
+        "cardName": "Mira Match",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 19605133,
+        "cardName": "Naturia Ladybug",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 7930346,
+        "cardName": "Origami Goddess",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 8972398,
+        "cardName": "Omni Dragon Brotaur",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 3289027,
+        "cardName": "Parl, Hermit of Dark World",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 16617334,
+        "cardName": "Performapal Rain Goat",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 20357457,
+        "cardName": "Pillar of the Future - Cyanos",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 74644400,
+        "cardName": "Psi-Reflector",
+        "quantity": 3,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 25550531,
+        "cardName": "Purrely",
+        "quantity": 2,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 14235211,
+        "cardName": "Rider of the Storm Winds",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 77360173,
+        "cardName": "Synkron Resonator",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 31887806,
+        "cardName": "Tobari the Sky Ninja",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 79814787,
+        "cardName": "The White Stone of Legend",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 57116033,
+        "cardName": "Winged Kuriboh",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": 4632019,
+        "cardName": "Yamatako Orochi",
+        "quantity": 1,
+        "stars": 1,
+        "type": "Effect",
+        "price": 0
+    },
+    {
+        "password": "89631139",
+        "cardName": "Blue-Eyes White Dragon",
+        "quantity": "3",
+        "stars": "8",
+        "type": "Effect",
+        "price": "0"
+    },
+    {
+        "password": "95788410",
+        "cardName": "Rabidragon",
+        "quantity": "3",
+        "stars": "8",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "76232340",
+        "cardName": "Sengenjin",
+        "quantity": "3",
+        "stars": "8",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "46986414",
+        "cardName": "Dark Magician",
+        "quantity": "3",
+        "stars": "7",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "89943723",
+        "cardName": "Elemental HERO Neos",
+        "quantity": "1",
+        "stars": "7",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "06368038",
+        "cardName": "Gaia The Fierce Knight",
+        "quantity": "1",
+        "stars": "7",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "62397231",
+        "cardName": "Hyozanryu",
+        "quantity": "3",
+        "stars": "8",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "87322377",
+        "cardName": "Launcher Spider",
+        "quantity": "1",
+        "stars": "7",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "74677422",
+        "cardName": "Red-Eyes Black Dragon",
+        "quantity": "3",
+        "stars": "7",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "02964201",
+        "cardName": "Ryu-Ran",
+        "quantity": "1",
+        "stars": "7",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "89386122",
+        "cardName": "Ally of Justice Clausolas",
+        "quantity": "2",
+        "stars": "6",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "14015067",
+        "cardName": "Ancient One of the Deep Forest",
+        "quantity": "1",
+        "stars": "6",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "70781052",
+        "cardName": "Summoned Skull",
+        "quantity": "1",
+        "stars": "6",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "50005633",
+        "cardName": "Swordstalker",
+        "quantity": "3",
+        "stars": "6",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "18246479",
+        "cardName": "Battle Steer",
+        "quantity": "1",
+        "stars": "5",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "42599677",
+        "cardName": "Flame Champion",
+        "quantity": "1",
+        "stars": "5",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "28546905",
+        "cardName": "Illusionist Faceless Mage",
+        "quantity": "1",
+        "stars": "5",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "67284908",
+        "cardName": "Labyrinth Wall",
+        "quantity": "1",
+        "stars": "5",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "74637266",
+        "cardName": "Octoberser",
+        "quantity": "1",
+        "stars": "5",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "78060096",
+        "cardName": "Terrorking Salmon",
+        "quantity": "1",
+        "stars": "5",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "49003308",
+        "cardName": "Gagagigo",
+        "quantity": "1",
+        "stars": "4",
+        "type": "Normal",
+        "price": "0"
+    },
+    {
+        "password": "38445524",
+        "cardName": "Gil Garth",
+        "quantity": "1",
+        "stars": "4",
+        "type": "Normal",
+        "price": "0"
+    }
+]
