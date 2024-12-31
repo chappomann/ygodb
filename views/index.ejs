@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Data Table</title>
+    <title>LA's Yugioh Collection</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
@@ -10,7 +10,7 @@
 
 <body>
 
-    <h1>Data Table</h1>
+    <h1>LA's Yugioh Collection</h1>
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterTable()">
@@ -46,7 +46,7 @@
             <option value="XYZ">XYZ</option>
             <option value="Fusion">Fusion</option>
             <option value="Ritual">Ritual</option>
-            <option value="Pendulem">Pendulem</option>
+            <option value="Pendulum">Pendulum</option>
             <option value="Link">Link</option>
             <option value="God Cards">God Cards</option>
             <option value="Token">Token</option>
@@ -61,7 +61,7 @@
         <button id="openModalBtn">Add A New Record</button>
     </div>
 
-    <div style="height:720px;overflow:auto;"">
+    <div style="height:720px;overflow:auto;">
         <table>
             <thead>
                 <tr>
@@ -77,28 +77,28 @@
                 <% data.forEach(cardData=> { %>
                     <tr>
                         <td><a href=" https://yugipedia.com/wiki/<%=cardData.password %>" target="_blank">
-        <%= cardData.password %>
-            </a>
-            </td>
-            <td>
-                <%= cardData.cardName %>
-            </td>
-            <td>
-                <%= cardData.quantity %>
-            </td>
-            <td>
-                <%= cardData.stars %>
-            </td>
-            <td>
-                <%= cardData.type %>
-            </td>
-            <td>
-                <%= cardData.price %>
-            </td>
-            </tr>
-            <% }); %>
-                </tbody>
-                </table>
+                                <%= cardData.password %>
+                            </a>
+                        </td>
+                        <td>
+                            <%= cardData.cardName %>
+                        </td>
+                        <td>
+                            <%= cardData.quantity %>
+                        </td>
+                        <td>
+                            <%= cardData.stars %>
+                        </td>
+                        <td>
+                            <%= cardData.type %>
+                        </td>
+                        <td>
+                            <%= cardData.price %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
     </div>
 
 
@@ -129,7 +129,7 @@
                     <option value="XYZ">XYZ</option>
                     <option value="Fusion">Fusion</option>
                     <option value="Ritual">Ritual</option>
-                    <option value="Pendulem">Pendulem</option>
+                    <option value="Pendulum">Pendulum</option>
                     <option value="Link">Link</option>
                     <option value="God Cards">God Cards</option>
                     <option value="Token">Token</option>
@@ -179,7 +179,7 @@
                             price: 0
                         };
                         function mapTypes(inputType) {
-                            switch (inputType) {
+                            switch (inputType.trim()) {
                                 case 'Normal':
                                     return 0;
                                 case 'Effect':
@@ -190,13 +190,13 @@
                                     return 3;
                                 case 'Synchro':
                                     return 4;
-                                case 'XYZ':
+                                case 'Xyz':
                                     return 5;
                                 case 'Fusion':
                                     return 6;
                                 case 'Ritual':
                                     return 7;
-                                case 'Pendulem':
+                                case 'Pendulum':
                                     return 8;
                                 case 'Link':
                                     return 9;
@@ -217,7 +217,7 @@
                         password.value = document.getElementById('prefillData-password').value;
                         cardName.value = data.cardName;
                         quantity.value = 1;
-                        stars.value = data.stars;
+                        stars.value = data.stars || 0;
                         type.selectedIndex = mapTypes(data.type);
                         price.value = 0;
 
@@ -253,7 +253,12 @@
             }
 
             function extractTitle(doc) {
-                return doc.title.split(' -')[0];
+                let title = doc.title.split(' -');
+                if (title.length > 2) {
+                    return `${title[0]} -${title[1]}`
+                } else {
+                    return title[0];
+                }
             }
 
             function extractLevel(doc) {
@@ -275,7 +280,7 @@
                 // Extract the type by removing "Types" and any leading/trailing whitespace
                 const type = substring.substring("Types".length, endIndex).trim();
 
-                return type.split('\n')[2];
+                return type.split('\n')[2].split(' ')[0];
 
             }
             const buildURL = `https://yugipedia.com/wiki/${document.getElementById('prefillData-password').value}`

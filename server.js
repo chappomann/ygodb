@@ -46,7 +46,7 @@ app.post('/add', (req, res) => {
     const success = writeData(data);
 
     if (success) {
-        res.send('<script>alert("Data added successfully!"); window.location.href = "/";</script>');
+        res.send('<script>window.location.href = "/";</script>');
     } else {
         res.send('<script>alert("Failed to add data.");</script>');
     }
@@ -65,7 +65,7 @@ app.get('/search', (req, res) => {
 });
 
 app.get('/scrape', (req, res) => {
-    
+
 })
 
 app.listen(port, () => {
