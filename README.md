@@ -1,5 +1,5 @@
 # ygodb
-to track my personal ygo collection
+to track my personal ygo collection (90% of this is from Google's Gemini and pure laziness)
 
 last updated 12/30 
 
