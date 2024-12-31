@@ -145,9 +145,11 @@
         const openModalBtn = document.getElementById('openModalBtn');
         const modal = document.getElementById('myModal');
         const span = document.getElementsByClassName("close")[0];
+        const passwordInput = document.getElementById('prefillData-password');
 
         openModalBtn.onclick = function () {
             modal.style.display = "block";
+            passwordInput.focus();
         }
 
         span.onclick = function () {
@@ -185,6 +187,7 @@
                                 case 'Effect':
                                     return 1;
                                 case 'Magic':
+                                case 'Spell':
                                     return 2;
                                 case 'Trap':
                                     return 3;
@@ -233,11 +236,17 @@
                 const innerTableText = doc.getElementsByClassName('innertable')[0].innerText;
                 // return innerTableText.split('Types\t')[1].split(' /')[1].split('\n')[0].split(' ')[1];
 
-                const typesIndex = innerTableText.indexOf("Types");
+                let typesIndex = innerTableText.indexOf("Types");
+                let isMagic = false;
 
                 // If "Types" is not found, return an empty string
                 if (typesIndex === -1) {
-                    return "";
+                    typesIndex = innerTableText.indexOf("type\n");
+                    isMagic = true;
+                    if (typesIndex === -1) {
+                        typesIndex = innerTableText.indexOf("type\n")
+                        return "";
+                    }
                 }
 
                 // Extract the substring starting from the index of "Types"
@@ -249,7 +258,7 @@
                 // Extract the type by removing "Types" and any leading/trailing whitespace
                 const type = substring.substring("Types".length, endIndex).trim();
 
-                return type.split('/ ')[1];
+                return !isMagic ? type.split('/ ')[1] : type.split(' ')[0];
             }
 
             function extractTitle(doc) {
