@@ -1,3 +1,4 @@
+const https = require('https');
 const fs = require('fs/promises');
 const path = require('path');
 
@@ -21,19 +22,14 @@ async function readJsonData(filePath) {
 async function writeJsonOrInsertData(filePath, oldData, newData, id) {
     try {
         const jsonOldData = JSON.parse(oldData);
-
-        // Find the index of the object to update within the array
         const index = jsonOldData.findIndex(item => parseInt(item.id) === parseInt(id));
 
         if (index !== -1) {
-            // Update the existing object
             jsonOldData[index] = { ...jsonOldData[index], ...newData };
         } else {
-            // Append the new data to the array
             jsonOldData.push({ ...newData, id });
         }
 
-        // Write the updated data back to the file
         await fs.writeFile(path.join(parentDir, `./data/${filePath}`), JSON.stringify(jsonOldData, null, 2));
         console.log('Data updated successfully.');
         return true;
@@ -53,7 +49,6 @@ async function writeJsonData(filePath, data) {
     }
 }
 
-// Find items by Key
 async function findItemsBykey(array, key, value) {
     const foundItem = await array.find(item => item[`${key}`] === value);
     return foundItem
@@ -86,10 +81,27 @@ function mergeArrays(arrayA, arrayB) {
 function dateGenerator() {
     const date = new Date();
     const year = date.getFullYear().toString().substr(-2);
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
 
     return `${month}-${day}-${year}`;
 }
 
-module.exports = { readJsonData, writeJsonData, writeJsonOrInsertData, findItemsBykey, findItemsByID, dateGenerator, mergeArrays }
+async function fetchDataAndWriteToFile(url, fileName) {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`HTTP Error! status: ${response.status}`);
+        }
+
+        const jsonData = await response.json();
+        await fs.writeFile(path.join(parentDir, `./data/${fileName}`), JSON.stringify(jsonData.data, null, 2));
+
+        console.log(`Downloaded ${url} to ${path.join(parentDir, `./public/img/${fileName}`)}`);
+    } catch (error) {
+        console.error('Error fetching data or writing to file:', error);
+    }
+}
+
+module.exports = { readJsonData, writeJsonData, writeJsonOrInsertData, findItemsBykey, findItemsByID, dateGenerator, mergeArrays, fetchDataAndWriteToFile }

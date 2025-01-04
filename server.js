@@ -9,13 +9,11 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Get all data
 app.get('/', async (req, res) => {
     const data = await readJsonData('yugioh-01-04-25.json');
     res.render('index', { data });
 });
 
-// Add new data (smart enough to update now)
 app.post('/add', async (req, res) => {
     const newData = req.body;
     const data = await readJsonData('yugioh-01-04-25.json');
@@ -30,7 +28,6 @@ app.post('/add', async (req, res) => {
     }
 });
 
-// Handle search
 app.get('/search', async (req, res) => {
     const searchTerm = req.query.q;
     const data = await readJsonData('yugioh-01-04-25.json');
@@ -42,7 +39,6 @@ app.get('/search', async (req, res) => {
     res.render('index', { data: filteredData });
 });
 
-// Handle search card quantity
 app.get('/searchCard', async (req, res) => {
     const id = req.query.id;
     const data = await readJsonData('yugioh-01-04-25.json');

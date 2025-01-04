@@ -3,8 +3,10 @@ To track your personal ygo collection. All we're doing is hitting the ygoprodeck
 
 last updated 1/3
 
-How To:
+How To Run Locally:
 - npm i
+- npm run generate:local-database
+- npm run generate:local-images
 - npm run dev
 - go to: [localhost:3000](http://localhost:3000/)
 

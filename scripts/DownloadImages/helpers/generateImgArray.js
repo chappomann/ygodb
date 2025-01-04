@@ -1,5 +1,6 @@
 
-const fs = require('fs');
+const fs = require('fs/promises');
+const { readJsonData } = require('../../../helpers/jsonHelper')
 const path = require('path');
 
 const parentDir = path.resolve(__dirname, '../../../');
@@ -21,21 +22,6 @@ async function downloadImages(images) {
 
             console.log(`Downloaded ${url} to ${path.join(parentDir, `./public/img/${fileName}`)}`);
         }
-    }
-}
-
-async function readJsonData(fileName) {
-    try {
-        const data = await fs.promises.readFile(path.join(parentDir, `./data/${fileName}`), 'utf8');
-        return JSON.parse(data);
-    } catch (error) {
-        if (error instanceof SyntaxError) {
-            throw new Error(`Invalid JSON in file ${fileName}: ${error.message}`);
-        }
-        if (error.code === 'ENOENT') {
-            throw new Error(`File not found: ${fileName}`);
-        }
-        throw new Error(`Error reading file ${fileName}: ${error.message}`);
     }
 }
 
