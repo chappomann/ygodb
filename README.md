@@ -1,19 +1,19 @@
 # ygodb
-to track my personal ygo collection (90% of this is from Google's Gemini and pure laziness)
+To track your personal ygo collection. All we're doing is hitting the ygoprodeck API and displaying a page with our count and associated details I found at some point important.
 
-last updated 12/30 
+last updated 1/3
 
 How To:
 - npm i
 - npm run dev
 - go to: [localhost:3000](http://localhost:3000/)
-- you will see all of LA's current cards. can add, filter and view them from [Yugipedia](https://wwww.yugipedia.com/)
-- to start over, remove entries from Yugioh.json and start fresh
-    - suggested: when adding a new record, just import the password. (much easier when starting out)
 
-Todo:
+Current Features:
+- Ability to create a fresh JSON 
+- Ability to pull images from ygoprodeck
+- Ability to migrate from old db to new one
 
-Features:
+Upcomming Features:
 - Bulk uploads/updates
 - Pricing
 - Loading spinner during filtering and sorting processes
