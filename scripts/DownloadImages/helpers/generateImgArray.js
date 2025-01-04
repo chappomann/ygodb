@@ -46,7 +46,7 @@ async function findImgs(filename) {
     data.forEach(element => {
         newLocalDataID = element.id;
         element.card_images.forEach(cardImageObj => {
-            newLocalData.push({ url: cardImageObj.image_url, fileName: newLocalDataID + '.jpg' })
+            newLocalData.push({ url: cardImageObj.image_url_small, fileName: newLocalDataID + '.jpg' })
         })
     });
     return newLocalData;
