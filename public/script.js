@@ -141,3 +141,218 @@ function showDetails(id) {
     var modal = document.getElementById('detailsModal');
     modal.style.display = 'block';
 }
+
+function updateQuantity(amount, password) { }
+
+function prefillData() {
+    const buildURL = `https://yugipedia.com/wiki/${document.getElementById('prefillData-password').value}`
+    getDataFromWebsite(buildURL)
+
+    function getDataFromWebsite(url) {
+        return fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                // Extract data using the provided selectors
+                const data = {
+                    type: extractType(doc),
+                    cardName: extractTitle(doc),
+                    stars: extractLevel(doc),
+                    price: 0
+                };
+                // set modal fields to vars
+                const prefillPassword = document.getElementById('prefillData-password');
+                const password = document.getElementById('modal-password');
+                const cardName = document.getElementById('modal-cardName');
+                const quantity = document.getElementById('modal-quantity');
+                const stars = document.getElementById('modal-stars');
+                const type = document.getElementById('modal-type');
+                const price = document.getElementById('modal-price');
+
+                fetch(`/searchCard?password=${prefillPassword.value}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            alert('issue with getting the data')
+                            console.log('issue with getting the data')
+                        }
+                        return response.json();
+                    })
+                    .then(cardData => {
+                        if (parseInt(cardData.found) > 0) {
+                            alert('You already have this card. Make sure to increase the amount!')
+                            quantity.focus();
+                        }
+                        // set values for the fields
+                        password.value = document.getElementById('prefillData-password').value;
+                        cardName.value = data.cardName;
+                        quantity.value = cardData.found === 0 ? 1 : cardData.found;
+                        stars.value = data.stars || 0;
+                        type.selectedIndex = mapTypes(data.type);
+                        price.value = 0;
+                    })
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+
+    function extractType(doc) {
+        const innerTableText = doc.getElementsByClassName('innertable')[0].innerText;
+        // return innerTableText.split('Types\t')[1].split(' /')[1].split('\n')[0].split(' ')[1];
+
+        let typesIndex = innerTableText.indexOf("Types");
+        let isMagic = false;
+
+        // If "Types" is not found, return an empty string
+        if (typesIndex === -1) {
+            typesIndex = innerTableText.indexOf("type\n");
+            isMagic = true;
+            if (typesIndex === -1) {
+                typesIndex = innerTableText.indexOf("type\n")
+                return "";
+            }
+        }
+
+        // Extract the substring starting from the index of "Types"
+        const substring = innerTableText.substring(typesIndex);
+
+        // Find the first occurrence of a newline or the end of the string
+        const endIndex = substring.indexOf("Level") === -1 ? substring.length : substring.indexOf("Level");
+
+        // Extract the type by removing "Types" and any leading/trailing whitespace
+        const type = substring.substring("Types".length, endIndex).trim();
+
+        return !isMagic ? type.split('/ ')[1] : type.split(' ')[0];
+    }
+
+    function extractTitle(doc) {
+        let title = doc.title.split(' -');
+        if (title.length > 2) {
+            return `${title[0]} -${title[1]}`
+        } else {
+            return title[0];
+        }
+    }
+
+    function extractLevel(doc) {
+        const innerTableText = doc.getElementsByClassName('innertable')[0].innerText;
+
+        const typesIndex = innerTableText.indexOf("Types");
+
+        // If "Types" is not found, return an empty string
+        if (typesIndex === -1) {
+            return "";
+        }
+
+        // Extract the substring starting from the index of "Types"
+        const substring = innerTableText.substring(typesIndex);
+
+        // Find the first occurrence of a newline or the end of the string
+        const endIndex = substring.indexOf("ATK") === -1 ? substring.length : substring.indexOf("ATK");
+
+        // Extract the type by removing "Types" and any leading/trailing whitespace
+        const type = substring.substring("Types".length, endIndex).trim();
+
+        return type.split('\n')[2].split(' ')[0];
+
+    }
+
+    function mapTypes(inputType) {
+        switch (inputType.trim()) {
+            case 'Normal':
+                return 0;
+            case 'Effect':
+                return 1;
+            case 'Magic':
+            case 'Spell':
+                return 2;
+            case 'Trap':
+                return 3;
+            case 'Synchro':
+                return 4;
+            case 'Xyz':
+                return 5;
+            case 'Fusion':
+                return 6;
+            case 'Ritual':
+                return 7;
+            case 'Pendulum':
+                return 8;
+            case 'Link':
+                return 9;
+            case 'God Cards':
+                return 10;
+            case 'Token':
+            default:
+                return 0;
+        }
+    }
+}
+
+function getDataFromWebsite(url) {
+    return fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+
+            // Extract data using the provided selectors
+            const data = {
+                type: extractType(doc),
+                cardName: extractTitle(doc),
+                stars: extractLevel(doc),
+                price: 0
+            };
+            function mapTypes(inputType) {
+                switch (inputType.trim()) {
+                    case 'Normal':
+                        return 0;
+                    case 'Effect':
+                        return 1;
+                    case 'Magic':
+                    case 'Spell':
+                        return 2;
+                    case 'Trap':
+                        return 3;
+                    case 'Synchro':
+                        return 4;
+                    case 'Xyz':
+                        return 5;
+                    case 'Fusion':
+                        return 6;
+                    case 'Ritual':
+                        return 7;
+                    case 'Pendulum':
+                        return 8;
+                    case 'Link':
+                        return 9;
+                    case 'God Cards':
+                        return 10;
+                    case 'Token':
+                    default:
+                        return 0;
+                }
+            }
+            const password = document.getElementById('modal-password');
+            const cardName = document.getElementById('modal-cardName');
+            const quantity = document.getElementById('modal-quantity');
+            const stars = document.getElementById('modal-stars');
+            const type = document.getElementById('modal-type');
+            const price = document.getElementById('modal-price');
+
+            password.value = document.getElementById('prefillData-password').value;
+            cardName.value = data.cardName;
+            quantity.value = 1;
+            stars.value = data.stars || 0;
+            type.selectedIndex = mapTypes(data.type);
+            price.value = 0;
+
+            // return data;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            return null;
+        });
+}

@@ -66,3 +66,8 @@ tr:nth-child(even) {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.add-new-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
