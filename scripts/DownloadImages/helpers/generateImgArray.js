@@ -4,6 +4,26 @@ const path = require('path');
 
 const parentDir = path.resolve(__dirname, '../../../');
 
+async function downloadImages(images) {
+    for (const { url, fileName } of images) {
+        try {
+            await fs.access(path.join(parentDir, `./public/img/${fileName}`), fs.constants.F_OK);
+            console.log(`File already exists: ${path.join(parentDir, `./public/img/${fileName}`)}`);
+        } catch (error) {
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                console.log(`Failed to fetch ${url}: ${response.status}`);
+            }
+
+            const buffer = await response.arrayBuffer();
+            await fs.writeFile(path.join(parentDir, `./public/img/${fileName}`), Buffer.from(buffer));
+
+            console.log(`Downloaded ${url} to ${path.join(parentDir, `./public/img/${fileName}`)}`);
+        }
+    }
+}
+
 async function readJsonData(fileName) {
     try {
         const data = await fs.promises.readFile(path.join(parentDir, `./data/${fileName}`), 'utf8');
@@ -19,8 +39,8 @@ async function readJsonData(fileName) {
     }
 }
 
-async function findImgs() {
-    let data = await readJsonData('ygoprodeck-01-03-25.json');
+async function findImgs(filename) {
+    let data = await readJsonData(filename);
     let newLocalData = [];
     let newLocalDataID;
     data.forEach(element => {
@@ -32,4 +52,4 @@ async function findImgs() {
     return newLocalData;
 }
 
-exports.findImgs = findImgs;
+module.exports = { findImgs, downloadImages };

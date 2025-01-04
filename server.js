@@ -1,82 +1,27 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs');
-const path = require('path');
+const { readJsonData, writeJsonOrInsertData, findItemsBykey } = require('./helpers/jsonHelper')
+
 const app = express();
 const port = 3000;
-
-const parentDir = path.resolve(__dirname, '.');
-
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-async function readJsonData(filePath) {
-    try {
-        const data = await fs.promises.readFile(path.join(parentDir, `/data/${filePath}`), 'utf8');
-        return JSON.parse(data);
-    } catch (error) {
-        if (error instanceof SyntaxError) {
-            throw new Error(`Invalid JSON in file ${filePath}: ${error.message}`);
-        }
-        if (error.code === 'ENOENT') {
-            throw new Error(`File not found: ${filePath}`);
-        }
-        throw new Error(`Error reading file ${filePath}: ${error.message}`);
-    }
-}
-
-async function writeJsonData(filePath, newData, id) {
-    try {
-        const data = await readJsonData(filePath);
-        const jsonData = data;
-
-        // Find the index of the object to update within the array
-        const index = jsonData.findIndex(item => parseInt(item.id) === parseInt(id));
-
-        if (index !== -1) {
-            // Update the existing object
-            jsonData[index] = { ...jsonData[index], ...newData };
-        } else {
-            // Append the new data to the array
-            jsonData.push({ ...newData, id });
-        }
-
-        // Write the updated data back to the file
-        await fs.promises.writeFile(path.join(parentDir, `/data/${filePath}`), JSON.stringify(jsonData, null, 2));
-
-        console.log('Data updated successfully.');
-        return true;
-    } catch (error) {
-        console.error('Error updating JSON data:', error);
-        return false;
-    }
-}
-
-// Find items by Key
-async function findItemsBykey(array, key, value) {
-    const foundItem = await array.find(item => item[`${key}`] === parseInt(value));
-    return foundItem
-}
-
-async function findItemsByID(array, value) {
-    return array.find(item => parseInt(item.id) === parseInt(value));
-}
-
 // Get all data
 app.get('/', async (req, res) => {
-    const data = await readJsonData('yugioh-01-03-25.json');
+    const data = await readJsonData('yugioh-01-04-25.json');
     res.render('index', { data });
 });
 
 // Add new data (smart enough to update now)
 app.post('/add', async (req, res) => {
     const newData = req.body;
-    const data = await readJsonData('yugioh-01-03-25.json');
+    const data = await readJsonData('yugioh-01-04-25.json');
     let success = false;
 
-    success = await writeJsonData('yugioh-01-03-25.json', newData, newData.id)
+    success = await writeJsonOrInsertData('yugioh-01-04-25.json', data, newData, newData.id)
 
     if (success) {
         res.send('<script>window.location.href = "/";</script>');
@@ -88,7 +33,7 @@ app.post('/add', async (req, res) => {
 // Handle search
 app.get('/search', async (req, res) => {
     const searchTerm = req.query.q;
-    const data = await readJsonData('yugioh-01-03-25.json');
+    const data = await readJsonData('yugioh-01-04-25.json');
     const filteredData = data.filter(item =>
         Object.values(item).some(value =>
             typeof value === 'string' && value.toLowerCase().includes(searchTerm.toLowerCase())
@@ -99,9 +44,9 @@ app.get('/search', async (req, res) => {
 
 // Handle search card quantity
 app.get('/searchCard', async (req, res) => {
-    const password = req.query.password;
-    const data = await readJsonData('yugioh-01-03-25.json');
-    const foundItem = await findItemsByID(data, password)
+    const id = req.query.id;
+    const data = await readJsonData('yugioh-01-04-25.json');
+    const foundItem = await findItemsBykey(data, 'id', parseInt(id))
     const recordExists = !!foundItem
 
     if (recordExists) {
@@ -112,7 +57,7 @@ app.get('/searchCard', async (req, res) => {
 });
 
 app.get('/scrape', (req, res) => {
-
+    res.send({ status: 'ok' })
 })
 
 app.listen(port, () => {

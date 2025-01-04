@@ -1,33 +1,33 @@
-function sortTable(n) {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.querySelector('table');
-    switching = true;
-    /*Make a loop that will continue until no switching has been done:*/
-    while (switching) {
-        //start by saying: no switching is done:
-        switching = false;
-        rows = table.rows;
-        /*Loop through all table rows (except the first, which contains table headers):*/
-        for (i = 1; i < (rows.length - 1); i++) {
-            //start by saying there should be no switching:
-            shouldSwitch = false;
-            /*Get the two elements you want to compare, one row below the other:*/
-            x = rows[i].getElementsByTagName("TD")[n];
-            y = rows[i + 1].getElementsByTagName("TD")[n];
-            //check if the two rows should switch place:
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                //if so, mark as a switch and break the loop:
-                shouldSwitch = true;
-                break;
-            }
-        }
-        if (shouldSwitch) {
-            /*If a switch has been marked, make the switch and mark that a switch has been done:*/
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-        }
-    }
-}
+// function sortTable(n) {
+//     var table, rows, switching, i, x, y, shouldSwitch;
+//     table = document.querySelector('table');
+//     switching = true;
+//     /*Make a loop that will continue until no switching has been done:*/
+//     while (switching) {
+//         //start by saying: no switching is done:
+//         switching = false;
+//         rows = table.rows;
+//         /*Loop through all table rows (except the first, which contains table headers):*/
+//         for (i = 1; i < (rows.length - 1); i++) {
+//             //start by saying there should be no switching:
+//             shouldSwitch = false;
+//             /*Get the two elements you want to compare, one row below the other:*/
+//             x = rows[i].getElementsByTagName("TD")[n];
+//             y = rows[i + 1].getElementsByTagName("TD")[n];
+//             //check if the two rows should switch place:
+//             if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+//                 //if so, mark as a switch and break the loop:
+//                 shouldSwitch = true;
+//                 break;
+//             }
+//         }
+//         if (shouldSwitch) {
+//             /*If a switch has been marked, make the switch and mark that a switch has been done:*/
+//             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+//             switching = true;
+//         }
+//     }
+// }
 
 function filterTable() {
     var input, filter, table, tr, td, i, txtValue;
@@ -131,21 +131,21 @@ function filterTableType(n) {
     }
 }
 
-function showDetails(id) {
-    // Fetch details for the specific ID (replace with your actual data fetching logic)
-    // For this example, we'll simply display the ID in the details content
-    var detailsContent = document.getElementById('detailsContent');
-    detailsContent.innerHTML = 'Details for Password: ' + id;
+// function showDetails(id) {
+//     // Fetch details for the specific ID (replace with your actual data fetching logic)
+//     // For this example, we'll simply display the ID in the details content
+//     var detailsContent = document.getElementById('detailsContent');
+//     detailsContent.innerHTML = 'Details for Password: ' + id;
 
-    // Show the modal
-    var modal = document.getElementById('detailsModal');
-    modal.style.display = 'block';
-}
+//     // Show the modal
+//     var modal = document.getElementById('detailsModal');
+//     modal.style.display = 'block';
+// }
 
 function getDataFromWebsite() {
     const prefillPassword = document.getElementById('prefillData-id');
     const quantity = document.getElementById('modal-quantity');
-    return fetch(`/searchCard?password=${prefillPassword.value}`)
+    return fetch(`/searchCard?id=${prefillPassword.value}`)
         .then(response => {
             if (!response.ok) {
                 alert('issue with getting the data')
@@ -188,7 +188,7 @@ function getDataFromWebsite() {
 }
 
 function getViewData(id) {
-    return fetch(`/searchCard?password=${id}`)
+    return fetch(`/searchCard?id=${id}`)
         .then(response => {
             if (!response.ok) {
                 alert('issue with getting the data')
