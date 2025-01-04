@@ -1,18 +1,21 @@
 
 const fs = require('fs');
+const path = require('path');
 
-async function readJsonData(filePath) {
+const parentDir = path.resolve(__dirname, '../../../');
+
+async function readJsonData(fileName) {
     try {
-        const data = await fs.promises.readFile(filePath, 'utf8');
+        const data = await fs.promises.readFile(path.join(parentDir, `./data/${fileName}`), 'utf8');
         return JSON.parse(data);
     } catch (error) {
         if (error instanceof SyntaxError) {
-            throw new Error(`Invalid JSON in file ${filePath}: ${error.message}`);
+            throw new Error(`Invalid JSON in file ${fileName}: ${error.message}`);
         }
         if (error.code === 'ENOENT') {
-            throw new Error(`File not found: ${filePath}`);
+            throw new Error(`File not found: ${fileName}`);
         }
-        throw new Error(`Error reading file ${filePath}: ${error.message}`);
+        throw new Error(`Error reading file ${fileName}: ${error.message}`);
     }
 }
 
@@ -23,7 +26,7 @@ async function findImgs() {
     data.forEach(element => {
         newLocalDataID = element.id;
         element.card_images.forEach(cardImageObj => {
-            newLocalData.push({ url: cardImageObj.image_url, filename: newLocalDataID + '.jpg' })
+            newLocalData.push({ url: cardImageObj.image_url, fileName: newLocalDataID + '.jpg' })
         })
     });
     return newLocalData;

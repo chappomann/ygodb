@@ -9,9 +9,9 @@ How To:
 - go to: [localhost:3000](http://localhost:3000/)
 
 Current Features:
-- Ability to create a fresh JSON 
+- Ability to create a fresh JSON based on ygoprodeck
 - Ability to pull images from ygoprodeck
-- Ability to migrate from old db to new one
+- Added ebay/tcg trader Pricing
 
 Upcomming Features:
 - Bulk uploads/updates
@@ -19,6 +19,7 @@ Upcomming Features:
 - Loading spinner during filtering and sorting processes
 - Logging and Error Handling
 - Logins for multiple users to hold their collection
+- Filtering that actually works
 
 Defects:
    - Cards

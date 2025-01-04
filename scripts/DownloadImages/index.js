@@ -1,13 +1,14 @@
 const fs = require('fs/promises');
 const { findImgs } = require('./helpers/generateImgArray');
+const path = require('path');
 
 const parentDir = path.resolve(__dirname, '../../');
 
 async function downloadImages(images) {
-    for (const { url, filename } of images) {
+    for (const { url, fileName } of images) {
         try {
-            await fs.access(path.join(parentDir, `./public/img/${filename}`), fs.constants.F_OK);
-            console.log(`File already exists: ${filePath}`);
+            await fs.access(path.join(parentDir, `./public/img/${fileName}`), fs.constants.F_OK);
+            console.log(`File already exists: ${path.join(parentDir, `./public/img/${fileName}`)}`);
         } catch (error) {
             const response = await fetch(url);
 
@@ -16,10 +17,9 @@ async function downloadImages(images) {
             }
 
             const buffer = await response.arrayBuffer();
-            await fs.writeFile(path.join(parentDir, `./public/img/${filename}`), Buffer.from(buffer));
+            await fs.writeFile(path.join(parentDir, `./public/img/${fileName}`), Buffer.from(buffer));
 
-            console.log(`Downloaded ${url} to ${filename}`);
-            console.error(`Error downloading ${url}:`, error);
+            console.log(`Downloaded ${url} to ${path.join(parentDir, `./public/img/${fileName}`)}`);
         }
     }
 }

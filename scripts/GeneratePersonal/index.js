@@ -4,22 +4,6 @@ const path = require('path');
 
 const parentDir = path.resolve(__dirname, '../../');
 
-async function fetchCardInfo() {
-    try {
-        const response = await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php');
-
-        if (!response.ok) {
-            throw new Error(`Error fetching card info: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log('Card info fetched successfully!');
-        return [data];
-    } catch (error) {
-        console.error('Error fetching card info:', error);
-    }
-}
-
 async function readJsonData(filePath) {
     try {
         const data = await fs.promises.readFile(path.join(parentDir, filePath), 'utf8');
@@ -48,28 +32,26 @@ async function writeJsonData(filePath, data) {
 function mergeArrays(arrayA, arrayB) {
     const mergedArray = [];
 
-    for (const itemB of arrayB) {
-        const matchingItem = arrayA.find(itemA => itemA.password === parseInt(itemB.id));
+    function removeLeadingZeros(number) {
+        return Number(number.toString().replace(/^0+/, ''));
+    }
 
-        if (matchingItem) {
-            mergedArray.push({
-                ...itemB,
-                quantity: matchingItem.quantity
-            });
-        } else {
-            mergedArray.push({
-                ...itemB,
-                quantity: 0
-            });
-        }
+    for (const itemB of arrayB) {
+        const matchingItem = arrayA.find(itemA => removeLeadingZeros(parseInt(itemA.password), 8) === itemB.id);
+
+        mergedArray.push({
+            ...itemB,
+            id: matchingItem ? matchingItem.password.length === 8 ? removeLeadingZeros(parseInt(matchingItem.password), 8) : matchingItem.password : itemB.id,
+            quantity: matchingItem ? matchingItem.quantity : 0
+        });
     }
 
     return mergedArray;
 }
 
 async function updateDatabase() {
-    let data = await fetchCardInfo();
-    // let data = await readJsonData('./data/ygoprodeck-01-03-25.json');
+    // let data = await fetchCardInfo();
+    let data = await readJsonData('./data/ygoprodeck-01-03-25.json');
     let personalData = await readJsonData('./data/Yugioh.json');
     let newLocalData = mergeArrays(personalData, data);
     await writeJsonData(path.join(parentDir, './data/yugioh-01-03-25.json'), newLocalData)

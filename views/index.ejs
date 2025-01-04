@@ -20,9 +20,9 @@
             <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterTable()">
         </div>
         <div class="star-filter-container">
-            <label for="stars">Filter By Stars:</label>
+            <label for="level">Filter By level:</label>
 
-            <select onchange="filterTableStar(this.selectedIndex)" name="filter-stars" id="filter-stars">
+            <select onchange="filterTableStar(this.selectedIndex)" name="filter-level" id="filter-level">
                 <option value="" selected>N/A</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -57,10 +57,6 @@
             </select>
         </div>
 
-        <div class="order-alphabetically-container">
-            <button onclick="sortTable(1)">Sort Alphabetically</button>
-        </div>
-
         <div class="add-new-item">
             <!-- <button id="openModalBtn">Add A New Record</button> -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -72,10 +68,10 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Password</th>
+                        <th>ID</th>
                         <th>Card Name</th>
                         <th>Quantity</th>
-                        <th>Stars</th>
+                        <th>Level</th>
                         <th>Type</th>
                         <th>Price</th>
                     </tr>
@@ -83,24 +79,27 @@
                 <tbody>
                     <% data.forEach(cardData=> { %>
                         <tr>
-                            <td><a href=" https://yugipedia.com/wiki/<%=cardData.password %>" target="_blank">
-                                    <%= cardData.password %>
-                                </a>
+                            <td>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modal-details" onclick="getViewData(<%= cardData.id %>)">
+                                    <%= cardData.id %>
+                                </button>
                             </td>
                             <td>
-                                <%= cardData.cardName %>
+                                <%= cardData.name %>
                             </td>
                             <td>
                                 <%= cardData.quantity %>
                             </td>
                             <td>
-                                <%= cardData.stars %>
+                                <%= cardData.level %>
                             </td>
                             <td>
                                 <%= cardData.type %>
                             </td>
                             <td>
-                                <%= cardData.price %>
+                                <%= parseInt(cardData.card_prices[0].amazon_price)> 0 ?
+                                    cardData.card_prices[0].amazon_price : cardData.card_prices[0].tcgplayer_price %>
                             </td>
                         </tr>
                         <% }); %>
@@ -119,22 +118,22 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label class="form-label" for="prefillData-password">Password:</label>
-                            <input class="form-control" type="number" pattern="\d*" id="prefillData-password"
-                                name="prefillData-password" required>
+                            <label class="form-label" for="prefillData-id">ID:</label>
+                            <input class="form-control" type="number" pattern="\d*" id="prefillData-id"
+                                name="prefillData-id" required>
                         </div>
                         <!-- <button id="prefillData" type="submit" class="btn btn-primary mb-3">IMPORT</button> -->
                         <button type="button" class="btn btn-outline-primary mb-3"
-                            onclick="prefillData()">IMPORT</button>
+                            onclick="getDataFromWebsite()">IMPORT</button>
                         <form action="/add" method="post">
                             <div class="form-group">
                                 <h5 class="card-title mb-4">Imported Data</h5>
-                                <label class="form-label" for="modal-password">Password:</label>
-                                <input class="form-control" type="text" id="modal-password" name="password" required>
+                                <label class="form-label" for="modal-id">ID:</label>
+                                <input class="form-control" type="text" id="modal-id" name="id" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="modal-cardName">Card Name:</label>
-                                <input class="form-control" type="text" id="modal-cardName" name="cardName" required>
+                                <label class="form-label" for="modal-name">Card Name:</label>
+                                <input class="form-control" type="text" id="modal-name" name="name" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="modal-quantity">Quantity:</label>
@@ -142,26 +141,13 @@
                                     name="quantity" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="modal-stars">Stars:</label>
-                                <input class="form-control" type="text" id="modal-stars" name="stars" required>
+                                <label class="form-label" for="modal-level">Level:</label>
+                                <input class="form-control" type="text" id="modal-level" name="level" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label" for="modal-type">Type:</label>
-                                <select name="type" id="modal-type">
-                                    <option value="Normal">Normal</option>
-                                    <option value="Effect">Effect</option>
-                                    <option value="Magic">Magic</option>
-                                    <option value="Trap">Trap</option>
-                                    <option value="Synchro">Synchro</option>
-                                    <option value="XYZ">XYZ</option>
-                                    <option value="Fusion">Fusion</option>
-                                    <option value="Ritual">Ritual</option>
-                                    <option value="Pendulum">Pendulum</option>
-                                    <option value="Link">Link</option>
-                                    <option value="God Cards">God Cards</option>
-                                    <option value="Token">Token</option>
-                                </select>
+                                <input class="form-control" type="text" id="modal-type" name="type">
                             </div>
 
                             <div class="form-group">
@@ -170,6 +156,50 @@
                                     required>
                             </div>
                             <button class="btn btn-primary" type="submit" class="btn btn-primary">ADD CARD</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-details" tabindex="-1" aria-labelledby="modal-detailsLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- <span class="close">&times;</span> -->
+                    <div class="modal-header">
+                        <!-- <h5 class="card-title mb-4">Add New Data</h5> -->
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Card Data</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/img/99315585.jpg" id="modal-view-img" class="img-thumbnail" alt="...">
+                        <div class="form-group">
+                            <label class="form-label" for="modal-view-id">ID:</label>
+                            <input class="form-control" type="text" id="modal-view-id" name="id" disabled required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="modal-view-name">Card Name:</label>
+                            <input class="form-control" type="text" id="modal-view-name" name="name" disabled required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="modal-view-quantity">Quantity:</label>
+                            <input class="form-control" type="number" pattern="\d*" id="modal-view-quantity" name="quantity"
+                                disabled required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="modal-view-level">Level:</label>
+                            <input class="form-control" type="text" id="modal-view-level" name="level" disabled required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="modal-view-type">Type:</label>
+                            <input class="form-control" type="text" id="modal-view-type" name="type" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="modal-view-price">Price:</label>
+                            <input class="form-control" type="text" id="modal-view-price" name="price" defaultValue="0"
+                                disabled required>
+                        </div>
                         </form>
                     </div>
                 </div>
