@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', async (req, res) => {
-    const searchTerm = 'a';
+    const searchTerm = 'Dark Magician';
     const data = await readJsonData('yugioh-01-04-25.json');
     const filteredData = data.filter(item =>
         item.id.toString().toLowerCase().includes(searchTerm.toString().toLowerCase()) ||

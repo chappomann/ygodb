@@ -1,101 +1,3 @@
-// function filterTable() {
-//     var input, filter, table, tr, td, i, txtValue;
-//     input = document.getElementById("searchInput");
-//     filter = input.value.toUpperCase();
-//     table = document.querySelector('table');
-//     tr = table.getElementsByTagName("tr");
-//     filterStars = document.getElementById("filter-level");
-//     filterType = document.getElementById("filter-types")
-
-//     if (input.length < 3) return;
-//     if (filterStars.value !== '') {
-//         filterTableStar(parseInt(filterStars.value))
-//     } if (filterType.value != '') {
-//         filterTableType(filterType.value)
-//     } else {
-//         for (i = 0; i < tr.length; i++) {
-//             td = tr[i].getElementsByTagName("td");
-//             if (tr[i].style.display === "none") {
-//                 tr[i].style.display = "";
-//             }
-//         }
-
-//     }
-//     for (i = 0; i < tr.length; i++) {
-//         td = tr[i].getElementsByTagName("td");
-//         if (tr[i].style.display !== "none") {
-//             for (var j = 0; j < td.length; j++) {
-//                 if (td[j]) {
-//                     txtValue = td[j].textContent || td[j].innerText;
-//                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//                         tr[i].style.display = "";
-//                         break;
-//                     } else {
-//                         tr[i].style.display = "none";
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-function filterTableStar(n) {
-    var input, filter, table, tr, td, i, txtValue;
-    input = n;
-    table = document.querySelector('table');
-    tr = table.getElementsByTagName("tr");
-    if (n === 0) {
-        for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td");
-            if (tr[i].style.display === "none") {
-                tr[i].style.display = "";
-            }
-        }
-    } else {
-        for (i = 1; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td");
-            for (var j = 0; j < td.length; j++) {
-                txtValue = td[3].textContent || td[3].innerText;
-                if (parseInt(txtValue) === n) {
-                    tr[i].style.display = "";
-                    break;
-                } else {
-                    tr[i].style.display = "none";
-                }
-            }
-        }
-    }
-}
-
-function filterTableType(n) {
-    var input, filter, table, tr, td, i, txtValue;
-    input = n;
-    filter = input.toUpperCase() || input;
-    table = document.querySelector('table');
-    tr = table.getElementsByTagName("tr");
-
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        if (tr[i].style.display === "none") {
-            tr[i].style.display = "";
-        }
-    }
-    for (i = 1; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        if (tr[i].style.display !== "none") {
-            for (var j = 0; j < td.length; j++) {
-                txtValue = td[4].textContent || td[4].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                    break;
-                } else {
-                    tr[i].style.display = "none";
-                }
-            }
-        }
-    }
-}
-
 function getDataFromWebsite() {
     const prefillPassword = document.getElementById('prefillData-id');
     const quantity = document.getElementById('modal-quantity');
@@ -129,7 +31,7 @@ function getDataFromWebsite() {
             password.value = prefillPassword.value;
             cardName.value = data.name;
             quantity.value = parseInt(cardData.quantity);
-            level.value = data.level || 0;
+            level.value = data.level || 'N/A';
             type.value = data.type;
             price.value = data.price;
         })
