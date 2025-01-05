@@ -180,3 +180,45 @@ function getViewData(id) {
             console.error('Error fetching data:', error);
         });
 }
+
+function loadChunk() {
+    fetch(`/data/${currentChunkIndex}`)
+        .then(response => {
+            if (!response.ok) {
+                alert('issue with getting the data')
+                console.log('issue with getting the data')
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            const tbody = document.getElementById('ygocardTable');
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                const idCell = row.insertCell();
+                const detailsButton = document.createElement('button');
+                detailsButton.type = 'button';
+                detailsButton.classList.add = ('btn', 'btn-outline-primary');
+                detailsButton.dataset.bsToggle = 'modal';
+                detailsButton.dataset.bsTarget = '#modal-details';
+                detailsButton.onclick = () => getViewData(item.id);
+                detailsButton.textContent = item.id
+                idCell.appendChild(detailsButton);
+
+                row.insertCell().textContent = item.name;
+                row.insertCell().textContent = item.quantity;
+                row.insertCell().textContent = item.level;
+                row.insertCell().textContent = item.type;
+                row.insertCell().textContent = parseInt(item.card_prices[0].amazon_price) > 0 ?
+                    item.card_prices[0].amazon_price :
+                    item.card_prices[0].tcgplayer_price
+                tbody.append(row);
+            });
+            currentChunkIndex++;
+            if (currentChunkIndex < totalChunks) {
+                loadChunk();
+            }
+        })
+        .catch(function (error) {
+            console.error('Error loading chunk: ', error);
+        });
+}

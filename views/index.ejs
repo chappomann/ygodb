@@ -76,33 +76,7 @@
                         <th>Price</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <% data.forEach(cardData=> { %>
-                        <tr>
-                            <td>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                                    data-bs-target="#modal-details" onclick="getViewData(<%= cardData.id %>)">
-                                    <%= cardData.id %>
-                                </button>
-                            </td>
-                            <td>
-                                <%= cardData.name %>
-                            </td>
-                            <td>
-                                <%= cardData.quantity %>
-                            </td>
-                            <td>
-                                <%= cardData.level %>
-                            </td>
-                            <td>
-                                <%= cardData.type %>
-                            </td>
-                            <td>
-                                <%= parseInt(cardData.card_prices[0].amazon_price)> 0 ?
-                                    cardData.card_prices[0].amazon_price : cardData.card_prices[0].tcgplayer_price %>
-                            </td>
-                        </tr>
-                        <% }); %>
+                <tbody id="ygocardTable">
                 </tbody>
             </table>
         </div>
@@ -212,6 +186,12 @@
             </div>
         </div>
     </div>
+    <script>
+        let currentChunkIndex = 0;
+        let totalChunks = <%= dataChunks.length %>;
+
+        loadChunk();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>

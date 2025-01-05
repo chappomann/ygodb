@@ -9,9 +9,36 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const chunkSize = 1000;
+
 app.get('/', async (req, res) => {
-    const data = await readJsonData('yugioh-01-04-25.json');
-    res.render('index', { data });
+    try {
+        const data = await readJsonData('yugioh-01-04-25.json');
+
+        let dataChunks = [];
+        for (let i = 0; i < data.length; i += chunkSize) {
+            dataChunks.push(data.slice((i, i + chunkSize)))
+        }
+
+        res.render('index', { dataChunks });
+    } catch (err) {
+        console.error('Error reading data:', err);
+        res.status(500).send('Internal Server Error')
+    }
+});
+
+app.get('/data/:chunkIndex', async (req, res) => {
+    try {
+        const data = await readJsonData('yugioh-01-04-25.json');
+        const chunkIndex = parseInt(req.params.chunkIndex);
+        const start = chunkIndex * chunkSize;
+        const end = start + chunkSize;
+        const chunk = data.slice(start, end);
+        res.json(chunk);
+    } catch (err) {
+        console.error('Error fetching data:', err);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 app.post('/add', async (req, res) => {
