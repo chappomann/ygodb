@@ -28,7 +28,7 @@ app.post('/add', async (req, res) => {
     success = await writeJsonOrInsertData('yugioh-01-04-25.json', data, newData, newData.id)
 
     if (success) {
-        res.send('<script>window.location.href = "/";</script>');
+        res.send(`<script>window.location.href = "/search?q=${newData.id}";</script>`);
     } else {
         res.send('<script>alert("Failed to add data.");</script>');
     }
