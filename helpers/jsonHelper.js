@@ -25,7 +25,7 @@ async function writeJsonOrInsertData(filePath, oldData, newData, id) {
         const index = jsonOldData.findIndex(item => parseInt(item.id) === parseInt(id));
 
         if (index !== -1) {
-            jsonOldData[index] = { ...jsonOldData[index], id: parseInt(newData.id), name: newData.name, quantity: parseInt(newData.quantity), level: newData.level === 'N/A' ? undefined : parseInt(newData.level), humanReadableCardType: newData.type, "card_prices['amazon_price']": newData.price }
+            jsonOldData[index] = { ...jsonOldData[index], id: parseInt(newData.id), name: newData.name, quantity: parseInt(newData.quantity), level: newData.level === 'N/A' ? undefined : parseInt(newData.level), humanReadableCardType: newData.type }
         };
 
         await fs.writeFile(path.join(parentDir, `./data/${filePath}`), JSON.stringify(jsonOldData, null, 2));
