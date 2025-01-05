@@ -21,13 +21,13 @@ async function readJsonData(filePath) {
 
 async function writeJsonOrInsertData(filePath, oldData, newData, id) {
     try {
-        const jsonOldData = JSON.parse(oldData);
+        const jsonOldData = oldData;
         const index = jsonOldData.findIndex(item => parseInt(item.id) === parseInt(id));
 
         if (index !== -1) {
-            jsonOldData[index] = { ...jsonOldData[index], ...newData };
+            jsonOldData[index] = { ...jsonOldData[index], ...newData, id: parseInt(newData.id) };
         } else {
-            jsonOldData.push({ ...newData, id });
+            jsonOldData.push({ ...newData, id: parseInt(id) });
         }
 
         await fs.writeFile(path.join(parentDir, `./data/${filePath}`), JSON.stringify(jsonOldData, null, 2));

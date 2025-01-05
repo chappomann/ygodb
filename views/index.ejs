@@ -17,9 +17,9 @@
         <h1>LA's Yugioh Collection</h1>
 
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterTable()">
+            <input type="text" id="searchInput" placeholder="Search..." onblur="search()">
         </div>
-        <div class="star-filter-container">
+        <!-- <div class="star-filter-container">
             <label for="level">Filter By level:</label>
 
             <select onchange="filterTableStar(this.selectedIndex)" name="filter-level" id="filter-level">
@@ -55,12 +55,12 @@
                 <option value="God Cards">God Cards</option>
                 <option value="Token">Token</option>
             </select>
-        </div>
+        </div> -->
 
         <div class="add-new-item">
             <!-- <button id="openModalBtn">Add A New Record</button> -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Add A New Record
+                Manage Records
             </button>
         </div>
 
@@ -76,7 +76,36 @@
                         <th>Price</th>
                     </tr>
                 </thead>
-                <tbody id="ygocardTable">
+                <tbody>
+                    <% dataChunks.forEach(chunk=> { %>
+                        <% chunk.forEach(cardData=> { %>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modal-details" onclick="getViewData(<%= cardData.id %>)">
+                                        <%= cardData.id %>
+                                    </button>
+                                </td>
+                                <td>
+                                    <%= cardData.name %>
+                                </td>
+                                <td>
+                                    <%= cardData.quantity %>
+                                </td>
+                                <td>
+                                    <%= cardData.level %>
+                                </td>
+                                <td>
+                                    <%= cardData.type %>
+                                </td>
+                                <td>
+                                    <%= parseInt(cardData.card_prices[0].amazon_price)> 0 ?
+                                        cardData.card_prices[0].amazon_price : cardData.card_prices[0].tcgplayer_price
+                                        %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                                <% }); %>
                 </tbody>
             </table>
         </div>
@@ -186,12 +215,6 @@
             </div>
         </div>
     </div>
-    <script>
-        let currentChunkIndex = 0;
-        let totalChunks = <%= dataChunks.length %>;
-
-        loadChunk();
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>

@@ -1,42 +1,43 @@
-function filterTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
-    table = document.querySelector('table');
-    tr = table.getElementsByTagName("tr");
-    filterStars = document.getElementById("filter-level");
-    filterType = document.getElementById("filter-types")
+// function filterTable() {
+//     var input, filter, table, tr, td, i, txtValue;
+//     input = document.getElementById("searchInput");
+//     filter = input.value.toUpperCase();
+//     table = document.querySelector('table');
+//     tr = table.getElementsByTagName("tr");
+//     filterStars = document.getElementById("filter-level");
+//     filterType = document.getElementById("filter-types")
 
-    if (filterStars.value !== '') {
-        filterTableStar(parseInt(filterStars.value))
-    } if (filterType.value != '') {
-        filterTableType(filterType.value)
-    } else {
-        for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td");
-            if (tr[i].style.display === "none") {
-                tr[i].style.display = "";
-            }
-        }
+//     if (input.length < 3) return;
+//     if (filterStars.value !== '') {
+//         filterTableStar(parseInt(filterStars.value))
+//     } if (filterType.value != '') {
+//         filterTableType(filterType.value)
+//     } else {
+//         for (i = 0; i < tr.length; i++) {
+//             td = tr[i].getElementsByTagName("td");
+//             if (tr[i].style.display === "none") {
+//                 tr[i].style.display = "";
+//             }
+//         }
 
-    }
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        if (tr[i].style.display !== "none") {
-            for (var j = 0; j < td.length; j++) {
-                if (td[j]) {
-                    txtValue = td[j].textContent || td[j].innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                        break;
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-    }
-}
+//     }
+//     for (i = 0; i < tr.length; i++) {
+//         td = tr[i].getElementsByTagName("td");
+//         if (tr[i].style.display !== "none") {
+//             for (var j = 0; j < td.length; j++) {
+//                 if (td[j]) {
+//                     txtValue = td[j].textContent || td[j].innerText;
+//                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//                         tr[i].style.display = "";
+//                         break;
+//                     } else {
+//                         tr[i].style.display = "none";
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 function filterTableStar(n) {
     var input, filter, table, tr, td, i, txtValue;
@@ -127,7 +128,7 @@ function getDataFromWebsite() {
 
             password.value = prefillPassword.value;
             cardName.value = data.name;
-            quantity.value = parseInt(cardData.quantity) === 0 ? 1 : parseInt(cardData.quantity);
+            quantity.value = parseInt(cardData.quantity);
             level.value = data.level || 0;
             type.value = data.type;
             price.value = data.price;
@@ -169,7 +170,7 @@ function getViewData(id) {
 
             password.value = data.id;
             cardName.value = data.name;
-            quantity.value = parseInt(cardData.quantity) === 0 ? 1 : parseInt(cardData.quantity);
+            quantity.value = parseInt(cardData.quantity);
             level.value = data.level || 0;
             type.value = data.type;
             price.value = data.price;
@@ -182,43 +183,35 @@ function getViewData(id) {
 }
 
 function loadChunk() {
-    fetch(`/data/${currentChunkIndex}`)
-        .then(response => {
-            if (!response.ok) {
-                alert('issue with getting the data')
-                console.log('issue with getting the data')
-            }
-            return response.json();
-        })
-        .then(function (data) {
-            const tbody = document.getElementById('ygocardTable');
-            data.forEach(item => {
-                const row = document.createElement('tr');
-                const idCell = row.insertCell();
-                const detailsButton = document.createElement('button');
-                detailsButton.type = 'button';
-                detailsButton.classList.add = ('btn', 'btn-outline-primary');
-                detailsButton.dataset.bsToggle = 'modal';
-                detailsButton.dataset.bsTarget = '#modal-details';
-                detailsButton.onclick = () => getViewData(item.id);
-                detailsButton.textContent = item.id
-                idCell.appendChild(detailsButton);
+    const tbody = document.getElementById('ygocardTable');
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        const idCell = row.insertCell();
+        const detailsButton = document.createElement('button');
+        detailsButton.type = 'button';
+        detailsButton.classList.add = ('btn', 'btn-outline-primary');
+        detailsButton.dataset.bsToggle = 'modal';
+        detailsButton.dataset.bsTarget = '#modal-details';
+        detailsButton.onclick = () => getViewData(item.id);
+        detailsButton.textContent = item.id
+        idCell.appendChild(detailsButton);
 
-                row.insertCell().textContent = item.name;
-                row.insertCell().textContent = item.quantity;
-                row.insertCell().textContent = item.level;
-                row.insertCell().textContent = item.type;
-                row.insertCell().textContent = parseInt(item.card_prices[0].amazon_price) > 0 ?
-                    item.card_prices[0].amazon_price :
-                    item.card_prices[0].tcgplayer_price
-                tbody.append(row);
-            });
-            currentChunkIndex++;
-            if (currentChunkIndex < totalChunks) {
-                loadChunk();
-            }
-        })
-        .catch(function (error) {
-            console.error('Error loading chunk: ', error);
-        });
+        row.insertCell().textContent = item.name;
+        row.insertCell().textContent = item.quantity;
+        row.insertCell().textContent = item.level;
+        row.insertCell().textContent = item.type;
+        row.insertCell().textContent = parseInt(item.card_prices[0].amazon_price) > 0 ?
+            item.card_prices[0].amazon_price :
+            item.card_prices[0].tcgplayer_price
+        tbody.append(row);
+    });
+    currentChunkIndex++;
+    if (currentChunkIndex < totalChunks) {
+        loadChunk();
+    }
+}
+
+function search() {
+    const searchTerm = document.getElementById('searchInput').value;
+    window.location.href = `/search?q=${searchTerm}`;
 }
