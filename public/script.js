@@ -10,11 +10,7 @@ function getDataFromWebsite() {
             return response.json();
         })
         .then(cardData => {
-            if (parseInt(cardData.found) > 0) {
-                alert('You already have this card. Make sure to increase the amount!')
-                quantity.focus();
-            }
-
+            quantity.focus();
             const data = {
                 type: cardData.humanReadableCardType,
                 name: cardData.name,
@@ -116,4 +112,12 @@ function loadChunk() {
 function search() {
     const searchTerm = document.getElementById('searchInput').value;
     window.location.href = `/search?q=${searchTerm}`;
+}
+
+function filter(category, value) {
+    window.location.href = `/filter?primaryCategory=${category}&primaryCategoryValue=${value}`;
+}
+
+function filterMonster(category, categoryValue, category2, categoryValue2, filter) {
+    window.location.href = `/filter?primaryCategory=${category}&primaryCategoryValue=${categoryValue}&secondaryCategory=${category2}&secondaryCategoryValue=${categoryValue2}&filter=${filter}`;
 }

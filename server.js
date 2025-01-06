@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', async (req, res) => {
-    const searchTerm = 'Dark Magician';
+    const searchTerm = 'A ';
     const data = await readJsonData('yugioh-01-04-25.json');
     const filteredData = data.filter(item =>
         item.id.toString().toLowerCase().includes(searchTerm.toString().toLowerCase()) ||
@@ -35,11 +35,40 @@ app.post('/add', async (req, res) => {
 });
 
 app.get('/search', async (req, res) => {
-    const searchTerm = req.query.q;
+    const searchTerm = req.query.q === '' ? 'A ' : req.query.q;
     const data = await readJsonData('yugioh-01-04-25.json');
     const filteredData = data.filter(item =>
         item.id.toString().toLowerCase().includes(searchTerm.toString().toLowerCase()) ||
         item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    res.render('index', { dataChunks: [filteredData] });
+});
+
+app.get('/filter', async (req, res) => {
+    const primaryCategory = req.query.primaryCategory;
+    const primaryCategoryValue = req.query.primaryCategoryValue
+    const secondaryCategory = req.query.secondaryCategory;
+    const secondaryCategoryValue = req.query.secondaryCategoryValue
+    const filter = req.query.filter;
+    const data = await readJsonData('yugioh-01-04-25.json');
+    const filteredData = data.filter(item => {
+        if (item['quantity'] > 0) {
+            if (filter === 'includes') {
+                if (item[primaryCategory] && item[primaryCategoryValue] !== 'N/A' && !item[secondaryCategory]) {
+                    return item[primaryCategory].toString().toLowerCase().includes(primaryCategoryValue.toString().toLowerCase());
+                } if (item[primaryCategory] && item[primaryCategoryValue] != 'N/A' && item[secondaryCategory] && item[secondaryCategoryValue] != 'N/A') {
+                    return (item[primaryCategory].toLowerCase().includes(primaryCategoryValue.toLowerCase()) && item[secondaryCategory].toString().includes(secondaryCategoryValue.toString().toLowerCase()))
+                }
+            } else {
+                if (item[primaryCategory] && item[primaryCategoryValue] !== 'N/A' && !item[secondaryCategory]) {
+                    return item[primaryCategory].toString().toLowerCase() === primaryCategoryValue.toString().toLowerCase();
+                } if (item[primaryCategory] && item[primaryCategoryValue] != 'N/A' && item[secondaryCategory] && item[secondaryCategoryValue] != 'N/A') {
+                    return (item[primaryCategory].toLowerCase() === primaryCategoryValue.toLowerCase() && item[secondaryCategory].toString() === secondaryCategoryValue.toString().toLowerCase())
+                }
+            }
+        }
+    }
     );
 
     res.render('index', { dataChunks: [filteredData] });
