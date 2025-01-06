@@ -1,5 +1,5 @@
 # ygodb
-To track your personal ygo collection. All we're doing is hitting the ygoprodeck API and displaying a page with our count and associated details I found at some point important.
+To track your personal ygo collection.
 
 last updated 1/3
 
@@ -16,17 +16,12 @@ Current Features:
 - Added ebay/tcg trader Pricing
 
 Upcomming Features:
-- Bulk uploads/updates
-- Pricing
-- Loading spinner during filtering and sorting processes
+- Bulk uploads/updates=
 - Logging and Error Handling
 - Logins for multiple users to hold their collection
 - Filtering that actually works
 
 Defects:
-   - Cards
-        - God Cards do not link to the proper Yugipedia links
-        - Blue-Eyes White Dragon is shown as an Effect monster
     - Filtering
         - Types and then by Stars: currently stars does not take into consideraiton the types
 

@@ -21,14 +21,12 @@ async function readJsonData(filePath) {
 
 async function writeJsonOrInsertData(filePath, oldData, newData, id) {
     try {
-        const jsonOldData = JSON.parse(oldData);
+        const jsonOldData = oldData;
         const index = jsonOldData.findIndex(item => parseInt(item.id) === parseInt(id));
 
         if (index !== -1) {
-            jsonOldData[index] = { ...jsonOldData[index], ...newData };
-        } else {
-            jsonOldData.push({ ...newData, id });
-        }
+            jsonOldData[index] = { ...jsonOldData[index], quantity: parseInt(newData.quantity) }
+        };
 
         await fs.writeFile(path.join(parentDir, `./data/${filePath}`), JSON.stringify(jsonOldData, null, 2));
         console.log('Data updated successfully.');
@@ -71,7 +69,7 @@ function mergeArrays(arrayA, arrayB) {
         mergedArray.push({
             ...itemB,
             id: matchingItem ? matchingItem.id : itemB.id,
-            quantity: matchingItem ? matchingItem.quantity : 0
+            quantity: matchingItem ? parseInt(matchingItem.quantity) : 0
         });
     }
 

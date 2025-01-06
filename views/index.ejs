@@ -6,62 +6,249 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA's Yugioh Collection</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="script.js"></script>>
 </head>
 
 <body>
     <div class="container">
         <h1>LA's Yugioh Collection</h1>
 
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterTable()">
-        </div>
-        <div class="star-filter-container">
-            <label for="level">Filter By level:</label>
+        <div class="buttons">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search..." onblur="search()">
+            </div>
 
-            <select onchange="filterTableStar(this.selectedIndex)" name="filter-level" id="filter-level">
-                <option value="" selected>N/A</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-            </select>
-        </div>
-        <div class="type-filter-container">
-            <label for="type">Filter By Types:</label>
-            <select onchange="filterTableType(this.value)" name="filter-types" id="filter-types">
-                <option value="" selected>N/A</option>
-                <option value="Normal">Normal</option>
-                <option value="Effect">Effect</option>
-                <option value="Magic">Magic</option>
-                <option value="Trap">Trap</option>
-                <option value="Synchro">Synchro</option>
-                <option value="XYZ">XYZ</option>
-                <option value="Fusion">Fusion</option>
-                <option value="Ritual">Ritual</option>
-                <option value="Pendulum">Pendulum</option>
-                <option value="Link">Link</option>
-                <option value="God Cards">God Cards</option>
-                <option value="Token">Token</option>
-            </select>
-        </div>
-
-        <div class="add-new-item">
-            <!-- <button id="openModalBtn">Add A New Record</button> -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Add A New Record
+            <button id="filterMagicBtn" type="button" class="btn btn-primary" onclick="filter('type', 'Spell Card')">
+                Spell Card Only
             </button>
+            <button id="filterTrapBtn" type="button" class="btn btn-primary" onclick="filter('type', 'Trap Card')">
+                Trap Card Only
+            </button>
+            <div class="d-inline-block">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonEMO"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Effect Monster Only
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonEMO">
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '12')">12-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '11')">11-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '10')">10-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '9')">9-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '8')">8-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '7')">7-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '6')">6-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '5')">5-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '4')">4-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '3')">3-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '2')">2-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Effect Monster', 'level', '1')">1-Star</button>
+                </ul>
+            </div>
+            <div class="d-inline-block">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonNMO"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Normal Monster Only
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonNMO">
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '12')">12-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '11')">11-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '10')">10-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '9')">9-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '8')">8-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '7')">7-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '6')">6-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '5')">5-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '4')">4-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '3')">3-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '2')">2-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Normal Monster', 'level', '1')">1-Star</button>
+                </ul>
+            </div>
+            <div class="d-inline-block">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonSMO"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Synchro Monster Only
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSMO">
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Synchro Monster', 'level', '12')">12-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '11')">11-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '10')">10-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '9')">9-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '8')">8-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '7')">7-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '6')">6-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '5')">5-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '4')">4-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '3')">3-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '2')">2-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('humanReadableCardType', 'Synchro Monster', 'level', '1')">1-Star</button>
+                </ul>
+            </div>
+            <div class="d-inline-block">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonFMO"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Fusion Monster Only
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonFMO">
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '12')">12-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '11')">11-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '10')">10-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '9')">9-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '8',)">8-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '7')">7-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '6')">6-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '5')">5-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '4')">4-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '3')">3-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '2')">2-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Fusion Monster', 'level', '1')">1-Star</button>
+                </ul>
+            </div>
+            <div class="d-inline-block">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="test3" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    XYZ Monster Only
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="test3">
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '12')">12-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '11')">11-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '10')">10-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '9')">9-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '8',)">8-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '7')">7-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '6')">6-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '5')">5-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '4')">4-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '3')">3-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '2')">2-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'XYZ Monster', 'level', '1')">1-Star</button>
+                </ul>
+            </div>
+            <div class="d-inline-block">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLMO"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Link Monster Only
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLMO">
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '12')">Link-12</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '11')">Link-11</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '10')">Link-10</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '9')">Link-9</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '8',)">Link-8</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '7')">Link-7</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '6')">Link-6</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '5')">Link-5</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '4')">Link-4</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '3')">Link-3</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '2')">Link-2</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Link Monster', 'linkval', '1')">Link-1</button>
+                </ul>
+            </div>
+            <div class="d-inline-block">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonPMO"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Pendulum Monster Only
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPMO">
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '12', 'includes')">12-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '11', 'includes')">11-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '10', 'includes')">10-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '9', 'includes')">9-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '8', 'includes')">8-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '7', 'includes')">7-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '6', 'includes')">6-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '5', 'includes')">5-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '4', 'includes')">4-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '3', 'includes')">3-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '2', 'includes')">2-Star</button>
+                    <button class="dropdown-item" type="button"
+                        onclick="filterMonster('type', 'Pendulum', 'level', '1', 'includes')">1-Star</button>
+                </ul>
+            </div>
         </div>
 
         <div>
@@ -77,144 +264,90 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% data.forEach(cardData=> { %>
-                        <tr>
-                            <td>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                                    data-bs-target="#modal-details" onclick="getViewData(<%= cardData.id %>)">
-                                    <%= cardData.id %>
-                                </button>
-                            </td>
-                            <td>
-                                <%= cardData.name %>
-                            </td>
-                            <td>
-                                <%= cardData.quantity %>
-                            </td>
-                            <td>
-                                <%= cardData.level %>
-                            </td>
-                            <td>
-                                <%= cardData.type %>
-                            </td>
-                            <td>
-                                <%= parseInt(cardData.card_prices[0].amazon_price)> 0 ?
-                                    cardData.card_prices[0].amazon_price : cardData.card_prices[0].tcgplayer_price %>
-                            </td>
-                        </tr>
-                        <% }); %>
+                    <% dataChunks.forEach(chunk=> { %>
+                        <% chunk.forEach(cardData=> { %>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalDetails" onclick="getViewData(<%= cardData.id %>)">
+                                        <%= cardData.id %>
+                                    </button>
+                                </td>
+                                <td>
+                                    <%= cardData.name %>
+                                </td>
+                                <td>
+                                    <%= cardData.quantity %>
+                                </td>
+                                <td>
+                                    <%= cardData.level ?? 'N/A' %>
+                                </td>
+                                <td>
+                                    <%= cardData.humanReadableCardType %>
+                                </td>
+                                <td>
+                                    <%= parseInt(cardData.card_prices[0].amazon_price)> 0 ?
+                                        cardData.card_prices[0].amazon_price : cardData.card_prices[0].tcgplayer_price
+                                        %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                                <% }); %>
                 </tbody>
             </table>
         </div>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalDetails" tabindex="-1" aria-labelledby="modalDetailsLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <!-- <span class="close">&times;</span> -->
                     <div class="modal-header">
-                        <!-- <h5 class="card-title mb-4">Add New Data</h5> -->
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Data</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label class="form-label" for="prefillData-id">ID:</label>
-                            <input class="form-control" type="number" pattern="\d*" id="prefillData-id"
-                                name="prefillData-id" required>
-                        </div>
-                        <!-- <button id="prefillData" type="submit" class="btn btn-primary mb-3">IMPORT</button> -->
-                        <button type="button" class="btn btn-outline-primary mb-3"
-                            onclick="getDataFromWebsite()">IMPORT</button>
-                        <form action="/add" method="post">
-                            <div class="form-group">
-                                <h5 class="card-title mb-4">Imported Data</h5>
-                                <label class="form-label" for="modal-id">ID:</label>
-                                <input class="form-control" type="text" id="modal-id" name="id" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="modal-name">Card Name:</label>
-                                <input class="form-control" type="text" id="modal-name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="modal-quantity">Quantity:</label>
-                                <input class="form-control" type="number" pattern="\d*" id="modal-quantity"
-                                    name="quantity" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="modal-level">Level:</label>
-                                <input class="form-control" type="text" id="modal-level" name="level" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="modal-type">Type:</label>
-                                <input class="form-control" type="text" id="modal-type" name="type">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="modal-price">Price:</label>
-                                <input class="form-control" type="text" id="modal-price" name="price" defaultValue="0"
-                                    required>
-                            </div>
-                            <button class="btn btn-primary" type="submit" class="btn btn-primary">ADD CARD</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modal-details" tabindex="-1" aria-labelledby="modal-detailsLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- <span class="close">&times;</span> -->
-                    <div class="modal-header">
-                        <!-- <h5 class="card-title mb-4">Add New Data</h5> -->
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Card Data</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="" id="modal-view-img" class="center-block" alt="...">
-                        <div class="form-group">
-                            <label class="form-label" for="modal-view-id">ID:</label>
-                            <input class="form-control" type="text" id="modal-view-id" name="id" disabled required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="modal-view-name">Card Name:</label>
-                            <input class="form-control" type="text" id="modal-view-name" name="name" disabled required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="modal-view-quantity">Quantity:</label>
-                            <input class="form-control" type="number" pattern="\d*" id="modal-view-quantity"
-                                name="quantity" disabled required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="modal-view-level">Level:</label>
-                            <input class="form-control" type="text" id="modal-view-level" name="level" disabled
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="modal-view-type">Type:</label>
-                            <input class="form-control" type="text" id="modal-view-type" name="type" disabled>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="modal-view-price">Price:</label>
-                            <input class="form-control" type="text" id="modal-view-price" name="price" defaultValue="0"
-                                disabled required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="modal-view-description">Description:</label>
-                            <textarea class="form-control" id="modal-view-description" name="description" rows="4"
-                                cols="100" disabled required></textarea>
-                        </div>
+                        <form action="/add" method="post">
+                            <img src="" id="modal-view-img" class="center-block" alt="...">
+                            <div class="form-group">
+                                <label class="form-label" for="modal-view-id">ID:</label>
+                                <input class="form-control" type="text" id="modal-view-id" name="id" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="modal-view-name">Card Name:</label>
+                                <input class="form-control" type="text" id="modal-view-name" name="name" disabled
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="modal-view-quantity">Quantity:</label>
+                                <input class="form-control" type="number" pattern="\d*" id="modal-view-quantity"
+                                    name="quantity" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="modal-view-level">Level:</label>
+                                <input class="form-control" type="text" id="modal-view-level" name="level" disabled
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="modal-view-type">Type:</label>
+                                <input class="form-control" type="text" id="modal-view-type" name="type" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="modal-view-price">Price:</label>
+                                <input class="form-control" type="text" id="modal-view-price" name="price"
+                                    defaultValue="0" disabled required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="modal-view-description">Description:</label>
+                                <textarea class="form-control" id="modal-view-description" name="description" rows="4"
+                                    cols="100" disabled required></textarea>
+                            </div>
+                            <button class="btn btn-primary" type="submit" class="btn btn-primary">EDIT CARD</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
