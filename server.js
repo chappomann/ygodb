@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', async (req, res) => {
     const searchTerm = 'A ';
-    const data = await readJsonData('yugioh-01-04-25.json');
+    const data = await readJsonData('yugioh-01-19-25.json');
     const filteredData = data.filter(item =>
         item.id.toString().toLowerCase().includes(searchTerm.toString().toLowerCase()) ||
         item.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -22,10 +22,10 @@ app.get('/', async (req, res) => {
 
 app.post('/add', async (req, res) => {
     const newData = req.body;
-    const data = await readJsonData('yugioh-01-04-25.json');
+    const data = await readJsonData('yugioh-01-19-25.json');
     let success = false;
 
-    success = await writeJsonOrInsertData('yugioh-01-04-25.json', data, newData, newData.id)
+    success = await writeJsonOrInsertData('yugioh-01-19-25.json', data, newData, newData.id)
 
     if (success) {
         res.send(`<script>window.location.href = "/search?q=${newData.id}";</script>`);
@@ -36,7 +36,7 @@ app.post('/add', async (req, res) => {
 
 app.get('/search', async (req, res) => {
     const searchTerm = req.query.q === '' ? 'A ' : req.query.q;
-    const data = await readJsonData('yugioh-01-04-25.json');
+    const data = await readJsonData('yugioh-01-19-25.json');
     const filteredData = data.filter(item =>
         item.id.toString().toLowerCase().includes(searchTerm.toString().toLowerCase()) ||
         item.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -51,7 +51,7 @@ app.get('/filter', async (req, res) => {
     const secondaryCategory = req.query.secondaryCategory;
     const secondaryCategoryValue = req.query.secondaryCategoryValue
     const filter = req.query.filter;
-    const data = await readJsonData('yugioh-01-04-25.json');
+    const data = await readJsonData('yugioh-01-19-25.json');
     const filteredData = data.filter(item => {
         if (item['quantity'] > 0) {
             if (filter === 'includes') {
@@ -76,7 +76,7 @@ app.get('/filter', async (req, res) => {
 
 app.get('/searchCard', async (req, res) => {
     const id = req.query.id;
-    const data = await readJsonData('yugioh-01-04-25.json');
+    const data = await readJsonData('yugioh-01-19-25.json');
     const foundItem = await findItemsBykey(data, 'id', parseInt(id))
     const recordExists = !!foundItem
 
