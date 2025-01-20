@@ -25,14 +25,14 @@ async function writeJsonOrInsertData(filePath, oldData, newData, id) {
         const index = jsonOldData.findIndex(item => parseInt(item.id) === parseInt(id));
 
         if (index !== -1) {
-            jsonOldData[index] = { ...jsonOldData[index], quantity: parseInt(newData.quantity) }
+            jsonOldData[index] = { ...jsonOldData[index], id: parseInt(newData.id), quantity: parseInt(newData.quantity) }
         };
 
         await fs.writeFile(path.join(parentDir, `./data/${filePath}`), JSON.stringify(jsonOldData, null, 2));
-        console.log('Data updated successfully.');
+        // console.log('Data updated successfully.');
         return true;
     } catch (error) {
-        console.error('Error updating JSON data:', error);
+        // console.error('Error updating JSON data:', error);
         return false;
     }
 }
