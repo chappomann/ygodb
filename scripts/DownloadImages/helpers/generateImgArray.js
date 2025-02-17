@@ -8,8 +8,10 @@ const parentDir = path.resolve(__dirname, '../../../');
 async function downloadImages(images) {
     for (const { url, fileName } of images) {
         try {
-            await fs.access(path.join(parentDir, `./public/img/${fileName}`), fs.constants.F_OK);
-            console.log(`File already exists: ${path.join(parentDir, `./public/img/${fileName}`)}`);
+            // await fs.access(path.join(parentDir, `./public/img/${fileName}`), fs.constants.F_OK);
+            await fs.access(path.join(parentDir, `./public/img-lg/${fileName}`), fs.constants.F_OK);
+            // console.log(`File already exists: ${path.join(parentDir, `./public/img/${fileName}`)}`);
+            console.log(`File already exists: ${path.join(parentDir, `./public/img-lg/${fileName}`)}`);
         } catch (error) {
             const response = await fetch(url);
 
@@ -18,9 +20,11 @@ async function downloadImages(images) {
             }
 
             const buffer = await response.arrayBuffer();
-            await fs.writeFile(path.join(parentDir, `./public/img/${fileName}`), Buffer.from(buffer));
+            // await fs.writeFile(path.join(parentDir, `./public/img/${fileName}`), Buffer.from(buffer));
+            await fs.writeFile(path.join(parentDir, `./public/img-lg/${fileName}`), Buffer.from(buffer));
 
-            console.log(`Downloaded ${url} to ${path.join(parentDir, `./public/img/${fileName}`)}`);
+            // console.log(`Downloaded ${url} to ${path.join(parentDir, `./public/img/${fileName}`)}`);
+            console.log(`Downloaded ${url} to ${path.join(parentDir, `./public/img-lg/${fileName}`)}`);
         }
     }
 }
@@ -32,7 +36,8 @@ async function findImgs(filename) {
     data.forEach(element => {
         newLocalDataID = element.id;
         element.card_images.forEach(cardImageObj => {
-            newLocalData.push({ url: cardImageObj.image_url_small, fileName: newLocalDataID + '.jpg' })
+            // newLocalData.push({ url: cardImageObj.image_url_small, fileName: newLocalDataID + '.jpg' })
+            newLocalData.push({ url: cardImageObj.image_url, fileName: newLocalDataID + '.jpg' })
         })
     });
     return newLocalData;
